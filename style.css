@@ -12,12 +12,14 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* TARGETING THE WHOLE PAGE WITH THIS PROPERTIES AND VALUES */
 * {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 }
 
+/* CSS FOR THE NAVIGATION BAR */
 nav {
 	padding: 8px 20px;
 	background-color: #c70101;
@@ -27,12 +29,23 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.4);
+	position: relative;
+	z-index: 1000;
+}
+
+.logo-name {
+	display: flex;
+	align-items: center;
 }
 
 nav img {
 	width: 60px;
 	height: 60px;
-	margin-left: 15rem;
+	margin-left: 10rem;
+}
+
+.logo-name h1 {
+	margin-left: 2rem;
 }
 
 nav ul {
@@ -54,12 +67,43 @@ nav ul li a {
 	font-size: 1.1rem;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
-	padding: 0 10px;
+	padding: 0 7px;
 }
 
 nav ul li a:hover {
 	text-decoration: underline;
 	text-decoration-thickness: 4px;
-	text-underline-offset: 1.7rem;
+	text-underline-offset: 1.8rem;
 	text-decoration-color: #fff;
+}
+
+/* STARTING CSS FOR MAIN */
+/* CSS for video */
+main video {
+	width: 100%;
+	aspect-ratio: 4/3;
+	margin-top: -15rem;
+}
+
+/* Hide default video controls */
+main video::-webkit-media-controls {
+	display: none !important;
+}
+
+main video::-webkit-media-controls-enclosure {
+	display: none !important;
+}
+
+main video::-webkit-media-controls-panel {
+	display: none !important;
+}
+
+#about {
+	background-color: #f8f8f8;
+	margin-top: -17rem;
+	position: relative;
+	border: none;
+	box-shadow: 3px 1px 4px 0 rgba(0, 0, 0, 0.4);
+
+	padding: 5rem 10rem;
 }
