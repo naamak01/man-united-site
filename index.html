@@ -13,9 +13,21 @@
 			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+
 		<title>Practice | Man United</title>
 	</head>
 	<body>
+		<!-- NAV MENU CODE -->
 		<nav>
 			<div class="logo-name">
 				<a href="./index.html"
@@ -30,51 +42,228 @@
 				<li><a href="#about">About</a></li>
 			</ul>
 		</nav>
+		<!-- END OF NAV SECTION -->
 
+		<!-- MAIN SECTION -->
 		<main>
 			<video autoplay loop muted>
 				<source src="./public/video.mp4" type="video/mp4" />
 				Your browser does not support the video tag.
 			</video>
-		</main>
 
-		<section id="about">
-			<h2>Welcome to Manchester</h2>
-			<div>
-				<h2>About US</h2>
-				<div>
-					<p>
-						WE ARE ONE OF THE MOST POPULAR AND SUCCESSFUL SPORTS TEAMS IN THE
-						WORLD, PLAYING ONE OF THE MOST POPULAR SPECTATOR SPORTS ON EARTH.
-						THROUGH OUR 141-YEAR HERITAGE WE HAVE WON 66 TROPHIES, INCLUDING A
-						RECORD 20 ENGLISH LEAGUE TITLES, ENABLING US TO DEVELOP WHAT WE
-						BELIEVE IS ONE OF THE WORLD'S LEADING SPORTS BRANDS AND A GLOBAL
-						COMMUNITY OF 1.1 BILLION FANS AND FOLLOWERS.
-					</p>
+			<!-- ABOUT SECTION -->
+			<section id="about" class="animating-container">
+				<h2><span>Welcome to Manchester</span></h2>
+				<h3>About US</h3>
+
+				<div class="about-sub-main">
+					<div class="about-sub-container1">
+						<p>
+							WE ARE ONE OF THE MOST POPULAR AND SUCCESSFUL SPORTS TEAMS IN THE
+							WORLD, PLAYING ONE OF THE MOST POPULAR SPECTATOR SPORTS ON EARTH.
+							THROUGH OUR 141-YEAR HERITAGE WE HAVE WON 66 TROPHIES, INCLUDING A
+							RECORD 20 ENGLISH LEAGUE TITLES, ENABLING US TO DEVELOP WHAT WE
+							BELIEVE IS ONE OF THE WORLD'S LEADING SPORTS BRANDS AND A GLOBAL
+							COMMUNITY OF 1.1 BILLION FANS AND FOLLOWERS.
+						</p>
+						<img
+							src="./public/old-trafford.jpg"
+							alt="Image of the Old Trafford of Man United"
+						/>
+					</div>
+					<div class="about-sub-container2">
+						<p>
+							Manchester United Football Club, commonly referred to as Man
+							United, or simply United, is a professional football club based in
+							Old Trafford, Greater Manchester, England. The club competes in
+							the Premier League, the top division in the English football
+							league system.
+						</p>
+						<p>
+							Our large, passionate community provides us with a worldwide
+							platform to generate significant revenue from multiple sources,
+							including sponsorship, merchandising, product licensing,
+							broadcasting and matchday.
+						</p>
+						<p>
+							We attract leading global companies such as adidas, Aon, and
+							General Motors (Chevrolet) that want access and exposure to our
+							community of followers and association with our brand.
+						</p>
+					</div>
 				</div>
-				<div>
-					<p>
-						Manchester United Football Club, commonly referred to as Man United,
-						or simply United, is a professional football club based in Old
-						Trafford, Greater Manchester, England. The club competes in the
-						Premier League, the top division in the English football league
-						system.
-					</p>
-					<p>
-						Our large, passionate community provides us with a worldwide
-						platform to generate significant revenue from multiple sources,
-						including sponsorship, merchandising, product licensing,
-						broadcasting and matchday.
-					</p>
-					<p>
-						We attract leading global companies such as adidas, Aon, and General
-						Motors (Chevrolet) that want access and exposure to our community of
-						followers and association with our brand.
-					</p>
+			</section>
+			<!-- END OF ABOUT SECTION -->
+
+			<button id="btnScrollToTop">
+				<i class="material-icons">arrow_upward</i>
+			</button>
+
+			<!-- IMAGE SLIDER DIV -->
+			<div class="main-slider-container">
+				<h2 animating-container>
+					<span
+						>We Accpet Challenges as they Come. United we Stand, Divided we
+						Fall.</span
+					>
+				</h2>
+
+				<div class="image-slider">
+					<div class="slides">
+						<!-- radio button starts -->
+						<input type="radio" name="radio-btn" id="radio1" />
+						<input type="radio" name="radio-btn" id="radio2" />
+						<input type="radio" name="radio-btn" id="radio3" />
+						<input type="radio" name="radio-btn" id="radio4" />
+						<input type="radio" name="radio-btn" id="radio5" />
+						<input type="radio" name="radio-btn" id="radio6" />
+						<input type="radio" name="radio-btn" id="radio7" />
+						<input type="radio" name="radio-btn" id="radio8" />
+						<!-- radio button ends -->
+
+						<!-- slides images start-->
+						<div class="slide first">
+							<img
+								src="./public/manu-hostspurs-fans.webp"
+								alt="amn united fans attending game against spurs home image"
+								class="slide-image"
+							/>
+						</div>
+						<div class="slide">
+							<img
+								src="./public/man-mens-training.jpg"
+								alt="Man united mens team with Licha image"
+								class="slide-image"
+							/>
+						</div>
+						<div class="slide">
+							<img
+								src="./public/GettyImages_womentraining.webp"
+								alt="image man united womens team training by Getty Image"
+								class="slide-image"
+							/>
+						</div>
+						<div class="slide">
+							<img
+								src="./public/old-tradford-slider.jpg"
+								alt="image of old trafford and the hugging statue"
+								class="slide-image"
+							/>
+						</div>
+						<div class="slide">
+							<img
+								src="./public/wan-bissaka.jpg"
+								alt="Image of Wan Bissaka training"
+								class="slide-image"
+							/>
+						</div>
+						<div class="slide">
+							<img
+								src="./public/GettyImages-fans.jpg"
+								alt="Image of man united fans cheering and supporting at old trafford"
+								class="slide-image"
+							/>
+						</div>
+						<div>
+							<img
+								src="./public/united-youth.webp"
+								alt="Image of man united youth players after a goal scroed"
+								class="slide-image"
+							/>
+						</div>
+						<div>
+							<img
+								src="./public/womens-team.webp"
+								alt="Image of man united womens team lunching jersey"
+								class="slide-image"
+							/>
+						</div>
+
+						<!-- slide image ends -->
+
+						<!-- automatic navigation start -->
+						<div class="navigation-auto">
+							<div class="auto-btn1"></div>
+							<div class="auto-btn2"></div>
+							<div class="auto-btn3"></div>
+							<div class="auto-btn4"></div>
+							<div class="auto-btn5"></div>
+							<div class="auto-btn6"></div>
+							<div class="auto-btn7"></div>
+							<div class="auto-btn8"></div>
+						</div>
+						<!-- automatic navigation ends -->
+					</div>
+
+					<!-- manual navigation starts -->
+					<div class="navigation-manual">
+						<label for="radio1" class="manual-btn"></label>
+						<label for="radio2" class="manual-btn"></label>
+						<label for="radio3" class="manual-btn"></label>
+						<label for="radio4" class="manual-btn"></label>
+						<label for="radio5" class="manual-btn"></label>
+						<label for="radio6" class="manual-btn"></label>
+						<label for="radio7" class="manual-btn"></label>
+						<label for="radio8" class="manual-btn"></label>
+					</div>
+					<!-- manual navigation ends -->
 				</div>
 			</div>
-		</section>
+			<!-- END OF IMAGE SLIDER DIV -->
+
+			<!-- FANS SECTION BEGIN -->
+			<section id="fans">
+				<div class="fans-header animating-container">
+					<h2 class="fans-main-h2">
+						&ldquo;FOOTBALL IS NOTHING WITHOUT FANS&rdquo;
+					</h2>
+					<h6>&ndash; Sir Matt Busby</h6>
+				</div>
+
+				<div class="fans-main-div animating-container">
+					<div class="fans-div">
+						<img
+							src="./public/fans-1.webp"
+							alt="man united fans happy holding jerserys and banners"
+						/>
+						<h2><span>Love Around the World</span></h2>
+						<div class="gradient-overlay"></div>
+					</div>
+
+					<div class="fans-div-1">
+						<img
+							src="./public/fans-2.webp"
+							alt="group of teenage man united fans on a field are Carrington in Manchester"
+						/>
+						<h2><span>Young Lads Representing</span></h2>
+						<div class="gradient-overlay"></div>
+					</div>
+
+					<div class="fans-div-2">
+						<img
+							src="./public/fans-3.webp"
+							alt="Fans from canada at the stadium supporting man united at a game"
+						/>
+						<h2><span>Canadian Fans</span></h2>
+						<div class="gradient-overlay"></div>
+					</div>
+
+					<div class="fans-div-3">
+						<img
+							src="./public/fans-4.webp"
+							alt="Man united fans from Cyprus showing love and represting"
+						/>
+						<h2><span>Love from Cyprus</span></h2>
+						<div class="gradient-overlay"></div>
+					</div>
+				</div>
+			</section>
+			<!-- FANS SECTION ENDS -->
+		</main>
+		<!-- END OF MAIN SECTION -->
 
 		<script type="module" src="/main.js"></script>
+		<script type="module" src="./image-slider.js"></script>
+		<script type="module" src="./scroll-effect.js"></script>
 	</body>
 </html>
