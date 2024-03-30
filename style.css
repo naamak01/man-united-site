@@ -654,20 +654,20 @@ div.fans-header {
 	cursor: pointer;
 }
 
-.btn-div #btn-1:active,
-.btn-div #btn-2:active {
+.btn-div-active {
 	color: #000000;
 	text-decoration: underline;
 	text-decoration-thickness: 4px;
 	text-underline-offset: 1rem;
 	text-decoration-color: #c70101;
+	pointer-events: none;
 }
 
 .btn-div #btn-1:hover,
 .btn-div #btn-2:hover {
 	text-decoration: underline;
 	text-decoration-thickness: 4px;
-	text-underline-offset: 0.7rem;
+	text-underline-offset: 1rem;
 	text-decoration-color: rgb(110, 110, 110, 0.8);
 }
 
@@ -708,6 +708,12 @@ div.fans-header {
 	object-fit: cover;
 	border-radius: 9px;
 	filter: brightness(80%);
+	transition: transform 0.9s ease-in-out; /* Smooth transition */
+	transform-origin: center center; /* Ensures the zoom effect is centered */
+}
+
+.player-info img:hover {
+	transform: scale(1.05); /* Zoom out by 20% */
 }
 
 span.player-name.firstname,
@@ -749,4 +755,8 @@ p.player-number::after {
 	height: 7px; /* Adjust the thickness of the border */
 	left: 1px;
 	width: 140%; /* Adjust this to control the width of the border */
+}
+
+.women-players {
+	display: none;
 }
