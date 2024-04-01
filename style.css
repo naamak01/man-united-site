@@ -49,7 +49,7 @@ nav {
 nav img {
 	width: 60px;
 	height: 60px;
-	margin-left: 10rem;
+	margin-left: 6rem;
 }
 
 .logo-name h1 {
@@ -60,7 +60,7 @@ nav ul {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-right: 15rem;
+	margin-right: 8rem;
 }
 
 nav ul li {
@@ -82,6 +82,103 @@ nav ul li a:hover {
 	text-decoration-thickness: 4px;
 	text-underline-offset: 1.8rem;
 	text-decoration-color: #fff;
+}
+
+/* HAMBURGER MENU */
+
+#hamburger-nav {
+	display: none;
+	background-color: #c70101;
+	justify-content: start;
+	align-items: center;
+	padding: 7px 15px;
+	min-height: 60px;
+}
+
+#hamburger-nav img {
+	margin-left: 2rem;
+	margin-right: 1.3rem;
+	padding-top: 0.2rem;
+}
+
+.nav-menu {
+	display: flex;
+	font-family: 'Montserrat', sans-serif, Helvetica;
+
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(255, 255, 255, 0.95);
+	gap: 15px;
+	flex-direction: column;
+	text-align: center;
+
+	position: fixed;
+	left: -100%;
+	top: 70px;
+	width: 100%;
+	transition: 0.5s ease;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	border-bottom: 2px solid #c70101;
+}
+
+.nav-menu.active {
+	left: 0;
+}
+
+.nav-menu li {
+	list-style: none;
+	margin: 6px 0;
+}
+
+.nav-menu li a {
+	font-size: 1.5rem;
+	color: #1a1a1a;
+	text-decoration: none;
+	transition: all 0.3s ease-in-out;
+	border-bottom: 2px solid #afadad;
+}
+
+.nav-menu li a:active {
+	color: #c70101;
+}
+
+.hamburger-icon {
+	display: none;
+	cursor: pointer;
+}
+
+.hamburger-icon span {
+	display: block;
+	width: 40px;
+	height: 2px;
+	padding: 2px 0;
+	margin-bottom: 0.5rem;
+	background-color: #ffffff;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.hamburger-icon.active span:first-child {
+	transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.active span:nth-child(2) {
+	opacity: 0;
+}
+
+.hamburger-icon.active span:last-child {
+	transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+	transform: none;
+}
+.hamburger-icon span:nth-child(2) {
+	opacity: 1;
+}
+.hamburger-icon span:last-child {
+	transform: none;
 }
 
 /* STARTING CSS FOR MAIN */
@@ -142,14 +239,14 @@ main video::-webkit-media-controls-panel {
 	border: none;
 	box-shadow: 3px 1px 4px 0 rgba(0, 0, 0, 0.4);
 
-	padding: 5rem 10rem;
+	padding: 5rem 8rem;
 }
 
 #about h2 {
 	font-size: 2.3rem;
 	font-family: 'Bebas Neue', Helvetica, sans-serif;
 	font-weight: 600;
-	margin-bottom: 5rem;
+	margin-bottom: 1rem;
 	position: relative;
 	display: inline-block; /* Ensures the border width matches the text content */
 	padding-top: 5px; /* Adjust as needed */
@@ -163,7 +260,7 @@ main video::-webkit-media-controls-panel {
 	bottom: 50px; /* Adjust the position of the border */
 	height: 10px; /* Adjust the thickness of the border */
 	left: 0;
-	width: 30%; /* Adjust this to control the width of the border */
+	width: 20%; /* Adjust this to control the width of the border */
 }
 
 #about h3 {
@@ -185,8 +282,8 @@ main video::-webkit-media-controls-panel {
 
 .about-sub-main {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	column-gap: 3rem;
+	grid-template-columns: 1.2fr 0.8fr;
+	column-gap: 2rem;
 	padding: 0 5rem;
 }
 
@@ -205,12 +302,12 @@ main video::-webkit-media-controls-panel {
 
 .about-sub-container1 p {
 	font-weight: 600;
-	padding: 2rem 2rem;
+	padding: 2rem 4rem;
 	line-height: 2rem;
 }
 
 .about-sub-container1 img {
-	width: 320px;
+	width: 600px;
 	height: 480px;
 	transition: transform 0.5s ease-out; /* Smooth transition */
 	transform-origin: center center; /* Ensures the zoom effect is centered */
@@ -267,7 +364,7 @@ main video::-webkit-media-controls-panel {
 	bottom: 50px; /* Adjust the position of the border */
 	height: 10px; /* Adjust the thickness of the border */
 	left: 0;
-	width: 30%; /* Adjust this to control the width of the border */
+	width: 20%; /* Adjust this to control the width of the border */
 }
 
 .image-slider {
@@ -435,12 +532,13 @@ div.fans-header {
 	padding: 3rem 21rem;
 	margin-bottom: 2rem;
 	row-gap: 1.5rem;
+	column-gap: 1.5rem;
 	overflow: hidden;
 }
 
 .fans-main-div img {
 	width: 584px;
-	height: 329px;
+	height: 359px;
 	filter: brightness(90%);
 	object-fit: cover;
 	border-radius: 9px;
@@ -459,7 +557,7 @@ div.fans-header {
 	position: absolute;
 	display: inline-block;
 	border-top: 4px solid #c70101; /* Set the color and thickness of the border */
-	bottom: 50px; /* Adjust the position of the border */
+	bottom: 40px; /* Adjust the position of the border */
 	height: 2px; /* Adjust the thickness of the border */
 	left: 0;
 	width: 30%; /* Adjust this to control the width of the border */
@@ -499,6 +597,7 @@ div.fans-header {
 		rgba(0, 0, 0, 0.9) 80%
 	);
 }
+/* END OF FANS CSS */
 
 /* LEGENDS SECTION CSS: BEGINS */
 #legends {
@@ -509,6 +608,7 @@ div.fans-header {
 	font-family: 'Bebas Neue', Helvetica, sans-serif;
 	line-height: 1rem;
 	margin-top: 4rem;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.4);
 }
 
 #legends h2 {
@@ -612,6 +712,16 @@ div.fans-header {
 	filter: brightness(200%);
 }
 
+p.p1 {
+	position: absolute;
+	bottom: 60px;
+}
+
+p.p2 {
+	position: absolute;
+	bottom: 40px;
+}
+
 /* ANIMATION FOR FADE IN SCROLLER*/
 .animating-container {
 	position: relative;
@@ -626,20 +736,40 @@ div.fans-header {
 
 /* BEGINNING CSS FOR PLAYER SECTION */
 
+#players {
+	margin-top: 4rem;
+}
+
+.players-header {
+	padding-bottom: 2rem;
+	padding-top: 2rem;
+	position: relative;
+}
+
+.players-header::after {
+	content: '';
+	position: absolute;
+	display: inline-block;
+	border-top: 4px solid #c70101; /* Set the color and thickness of the border */
+	bottom: 50px; /* Adjust the position of the border */
+	height: 19px; /* Adjust the thickness of the border */
+	left: 43.5%;
+	width: 5%; /* Adjust this to control the width of the border */
+}
+
 .men-players h2,
 .player-info-div {
-	margin-left: 15rem;
-	margin-right: 15rem;
+	margin-left: 12rem;
+	margin-right: 12rem;
 }
 
 .btn-div {
-	margin-bottom: 1.1rem;
 	font-family: 'Montserrat', sans-serif, Helvetica;
 	position: sticky;
 	top: 80px;
 	z-index: 1000;
 	background-color: #ffffff;
-	padding: 1rem 15rem;
+	padding: 1rem 12rem;
 	padding-bottom: 0.9rem;
 	margin-bottom: 1.4rem;
 }
@@ -759,4 +889,2760 @@ p.player-number::after {
 
 .women-players {
 	display: none;
+}
+
+/* CSS FOR THE FOOTER OF PAGE */
+footer {
+	background-color: #1a1a1a;
+	font-family: 'source-sans-pro', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	height: 13vh;
+	padding-top: 1.5rem;
+	line-height: 1.2rem;
+}
+
+.main-footer {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+	margin-bottom: 1rem;
+	font-weight: 400;
+
+	color: #d9d9d9;
+}
+
+p.disclaimer {
+	font-weight: 700;
+}
+
+.attribute {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+
+	color: #a3a3a3;
+}
+
+/* MEDIA QUERY TARGETING SCREEN WIDTH BETWEEN 1462PX & 1563PX */
+@media (min-width: 1200px) and (max-width: 1560px) {
+	/* NAV SECTION */
+	nav {
+		padding: 6px 10px;
+	}
+
+	nav img {
+		margin-left: 7rem;
+	}
+
+	nav ul {
+		margin-right: 2rem;
+	}
+
+	/* ABOUT SECTION */
+
+	#about {
+		padding: 2rem 4rem;
+	}
+
+	#about h2 {
+		margin-bottom: 1rem;
+		margin-top: 2rem;
+	}
+
+	#about h3 {
+		margin-top: 0;
+		margin-bottom: 1rem;
+	}
+
+	.about-sub-main {
+		display: grid;
+		grid-template-columns: 1fr 0.8fr;
+		padding: 2rem 2rem;
+	}
+
+	.about-sub-container1 img {
+		width: 310px;
+		height: 500px;
+		object-fit: fill;
+	}
+
+	.about-sub-container1 p {
+		padding: 1.4rem 1.8rem;
+		line-height: 1.9rem;
+		font-size: 1.2rem;
+	}
+
+	.about-sub-container2 p {
+		font-size: 1.3rem;
+	}
+
+	.about-sub-container2 {
+		padding: 1rem 2rem;
+		line-height: 1.6rem;
+	}
+
+	/* IMAGE SLIDER SECTIOM */
+
+	.main-slider-container {
+		margin-top: 3rem;
+		padding-top: 4rem;
+	}
+
+	.main-slider-container h2 {
+		font-size: 1.8rem;
+		padding-top: 5px; /* Adjust as needed */
+	}
+
+	.main-slider-container h2::after {
+		width: 16%;
+		bottom: 70px;
+	}
+	.navigation-manual {
+		margin-top: -10px;
+	}
+
+	/* FANS SECTION */
+	.fans-main-div {
+		padding: 3rem 13rem;
+		margin-bottom: 2rem;
+		row-gap: 2rem;
+		column-gap: 2rem;
+		overflow: hidden;
+	}
+
+	.fans-main-div h2 ::after {
+		height: 1px; /* Adjust the thickness of the border */
+		width: 25%; /* Adjust this to control the width of the border */
+		bottom: 40px; /* Adjust the position of the border */
+	}
+
+	.fans-main-div img {
+		width: 530px;
+		height: 340px;
+	}
+
+	.fans-div .gradient-overlay,
+	.fans-div-1 .gradient-overlay,
+	.fans-div-2 .gradient-overlay,
+	.fans-div-3 .gradient-overlay {
+		width: 530px; /* Make the overlay cover the entire container */
+		height: 100%;
+	}
+
+	/* LEGENDS SECTION */
+
+	#legends h2 {
+		margin-left: 3rem;
+		margin-top: 1.2rem;
+	}
+
+	.legends-main-div {
+		padding: 2.8rem 3rem;
+		row-gap: 2rem;
+		column-gap: 2rem;
+	}
+
+	.legends-main-div img {
+		width: 450px;
+		height: 340px;
+	}
+
+	/* PLAYER SECTION */
+	.players-header::after {
+		left: 41.5%;
+	}
+
+	.btn-div {
+		padding: 1rem 2rem;
+	}
+
+	.men-players h2,
+	.player-info-div {
+		margin-left: 2rem;
+		margin-right: 4rem;
+	}
+
+	.player-info img {
+		width: 330px;
+		height: 310px;
+		object-fit: cover;
+	}
+
+	/* FOOTER SECTION */
+	footer {
+		height: 20vh;
+	}
+
+	.main-footer {
+		margin-top: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: 10rem;
+	}
+
+	.attribute {
+		margin-left: 7rem;
+	}
+}
+
+/* MEDIA QUERY TARGETING SCREEN WIDTH BETWEEN 1410PX & 1467PX */
+@media (min-width: 1410px) and (max-width: 1467px) {
+	/* NAV SECTION */
+	nav {
+		padding: 6px 10px;
+	}
+
+	nav img {
+		margin-left: 7rem;
+	}
+
+	nav ul {
+		margin-right: 2rem;
+	}
+
+	/* ABOUT SECTION */
+
+	#about {
+		padding: 2rem 4rem;
+	}
+
+	#about h2 {
+		margin-bottom: 1rem;
+		margin-top: 2rem;
+	}
+
+	#about h3 {
+		margin-top: 0;
+		margin-bottom: 1rem;
+	}
+
+	.about-sub-main {
+		display: grid;
+		grid-template-columns: 1fr 0.8fr;
+		padding: 2rem 2rem;
+	}
+
+	.about-sub-container1 img {
+		width: 310px;
+		height: 500px;
+		object-fit: fill;
+	}
+
+	.about-sub-container1 p {
+		padding: 1.4rem 1.8rem;
+		line-height: 1.5rem;
+		font-size: 1.2rem;
+		margin: auto 0;
+	}
+
+	.about-sub-container2 p {
+		font-size: 1.3rem;
+	}
+
+	.about-sub-container2 {
+		padding: 1rem 2rem;
+		line-height: 1.6rem;
+	}
+
+	/* IMAGE SLIDER SECTIOM */
+
+	.main-slider-container {
+		margin-top: 3rem;
+		padding-top: 4rem;
+	}
+
+	.main-slider-container h2 {
+		font-size: 1.8rem;
+		padding-top: 5px; /* Adjust as needed */
+	}
+
+	.main-slider-container h2::after {
+		width: 16%;
+		bottom: 70px;
+	}
+	.navigation-manual {
+		margin-top: 40px;
+	}
+
+	/* FANS SECTION */
+	.fans-main-div {
+		padding: 3rem 13rem;
+		margin-bottom: 2rem;
+		row-gap: 2rem;
+		column-gap: 2rem;
+		overflow: hidden;
+	}
+
+	.fans-main-div h2 ::after {
+		height: 1px; /* Adjust the thickness of the border */
+		width: 25%; /* Adjust this to control the width of the border */
+		bottom: 40px; /* Adjust the position of the border */
+	}
+
+	.fans-main-div img {
+		width: 530px;
+		height: 340px;
+	}
+
+	.fans-div .gradient-overlay,
+	.fans-div-1 .gradient-overlay,
+	.fans-div-2 .gradient-overlay,
+	.fans-div-3 .gradient-overlay {
+		width: 530px; /* Make the overlay cover the entire container */
+		height: 100%;
+	}
+
+	/* LEGENDS SECTION */
+
+	#legends h2 {
+		margin-left: 3rem;
+		margin-top: 1.2rem;
+	}
+
+	.legends-main-div {
+		padding: 2.8rem 3.2rem;
+		row-gap: 1.5rem;
+		column-gap: 1.5rem;
+	}
+
+	.legends-main-div img {
+		width: 420px;
+		height: 340px;
+	}
+
+	/* PLAYER SECTION */
+	.players-header::after {
+		left: 41.5%;
+	}
+
+	.btn-div {
+		padding: 1rem 2rem;
+	}
+
+	.men-players h2,
+	.player-info-div {
+		margin-left: 2rem;
+		margin-right: 4rem;
+	}
+
+	.player-info img {
+		width: 300px;
+		height: 290px;
+		object-fit: cover;
+	}
+
+	/* FOOTER SECTION */
+	footer {
+		height: 20vh;
+	}
+
+	.main-footer {
+		margin-top: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: 10rem;
+	}
+
+	.attribute {
+		margin-left: 7rem;
+	}
+}
+
+/* MEDIA QUERY TARGETING SCREEN WIDTH BETWEEN 1300PX & 1465PX */
+
+@media (min-width: 1250px) and (max-width: 1409px) {
+	/* ABOUT SECTION */
+
+	#about {
+		padding: 2rem 2rem;
+	}
+
+	.about-sub-main {
+		display: grid;
+		grid-template-columns: 1.2fr 0.8fr;
+		padding: 2rem 1.2rem;
+	}
+
+	.about-sub-container1 img {
+		width: 310px;
+		height: 500px;
+		object-fit: fill;
+	}
+
+	.about-sub-container1 p {
+		padding: 1.4rem 1.8rem;
+		line-height: 1.5rem;
+		font-size: 1.2rem;
+		margin: auto 0;
+	}
+
+	.about-sub-container2 {
+		padding: 1rem 2rem;
+		line-height: 1.3rem;
+	}
+
+	/* IMAGE SLIDER SECTION */
+
+	.navigation-manual {
+		margin-top: 40px;
+	}
+
+	/* FANS SECTION */
+	.fans-main-div {
+		padding: 3rem 7rem;
+		margin-bottom: 2rem;
+		row-gap: 2rem;
+		column-gap: 2rem;
+		overflow: hidden;
+	}
+
+	.fans-main-div h2 ::after {
+		height: 1px; /* Adjust the thickness of the border */
+		width: 25%; /* Adjust this to control the width of the border */
+		bottom: 40px; /* Adjust the position of the border */
+	}
+
+	.fans-main-div img {
+		width: 500px;
+		height: 320px;
+	}
+
+	.fans-div .gradient-overlay,
+	.fans-div-1 .gradient-overlay,
+	.fans-div-2 .gradient-overlay,
+	.fans-div-3 .gradient-overlay {
+		width: 500px; /* Make the overlay cover the entire container */
+		height: 100%;
+	}
+
+	/* LEGENDS SECTION */
+
+	#legends h2 {
+		margin-left: 2rem;
+		margin-top: 1.2rem;
+	}
+
+	.legends-main-div {
+		padding: 2.8rem 2rem;
+		row-gap: 1.5rem;
+		column-gap: 1.5rem;
+	}
+
+	.legends-main-div img {
+		width: 380px;
+		height: 320px;
+	}
+
+	/* PLAYER SECTION */
+	.players-header::after {
+		left: 41.5%;
+	}
+
+	.btn-div {
+		padding: 1rem 2rem;
+	}
+
+	.men-players h2,
+	.player-info-div {
+		margin-left: 2rem;
+		margin-right: 4rem;
+	}
+
+	.player-info img {
+		width: 270px;
+		height: 250px;
+		object-fit: cover;
+	}
+
+	/* FOOTER SECTION */
+	footer {
+		height: 20vh;
+	}
+}
+
+/* MEDIA QUERY TARGETING SCREEN WIDTH BETWEEN 1172PX & 1249PX */
+
+@media (min-width: 1172px) and (max-width: 1249px) {
+	/* NAV SECTION */
+	nav {
+		padding: 6px 10px;
+	}
+
+	nav img {
+		margin-left: 4rem;
+	}
+
+	nav ul {
+		margin-right: 2rem;
+	}
+
+	/* ABOUT SECTION */
+
+	#about {
+		padding: 2rem 4rem;
+	}
+
+	#about h2 {
+		margin-bottom: 1rem;
+		margin-top: 2rem;
+	}
+
+	#about h3 {
+		margin-top: 0;
+		margin-bottom: 1rem;
+	}
+
+	/* ABOUT SECTION */
+
+	#about {
+		padding: 2rem 3rem;
+	}
+
+	.about-sub-main {
+		display: grid;
+		grid-template-columns: 1.2fr 0.8fr;
+		padding: 2rem 1.2rem;
+	}
+
+	.about-sub-container1 img {
+		width: 310px;
+		height: 500px;
+		object-fit: fill;
+	}
+
+	.about-sub-container1 p {
+		padding: 1.4rem 1.8rem;
+		line-height: 1.5rem;
+		font-size: 1rem;
+		margin: auto 0;
+	}
+
+	.about-sub-container2 {
+		padding: 1rem 2rem;
+		line-height: 1.3rem;
+	}
+
+	/* IMAGE SLIDER SECTION */
+
+	.image-slider {
+		width: 1000px;
+		height: 500px;
+		border-radius: 10px;
+		overflow: hidden;
+		height: 60vh;
+	}
+
+	.slides {
+		width: 500%;
+		height: 500px;
+		display: flex;
+	}
+
+	.slides input {
+		display: none;
+	}
+
+	.slide {
+		width: 20%;
+		transition: 2s;
+	}
+
+	img.slide-image {
+		width: 1000px;
+		height: 500px;
+		border-radius: 10px;
+		object-fit: contain;
+		filter: brightness(90%);
+		margin-right: 3rem;
+	}
+
+	.navigation-manual {
+		margin-top: 40px;
+	}
+
+	/* FANS SECTION */
+	.fans-main-div {
+		padding: 3rem 4rem;
+		margin-bottom: 2rem;
+		row-gap: 2rem;
+		column-gap: 2rem;
+		overflow: hidden;
+	}
+
+	.fans-main-div h2 ::after {
+		height: 1px; /* Adjust the thickness of the border */
+		width: 25%; /* Adjust this to control the width of the border */
+		bottom: 40px; /* Adjust the position of the border */
+	}
+
+	.fans-main-div img {
+		width: 500px;
+		height: 320px;
+	}
+
+	.fans-div .gradient-overlay,
+	.fans-div-1 .gradient-overlay,
+	.fans-div-2 .gradient-overlay,
+	.fans-div-3 .gradient-overlay {
+		width: 500px; /* Make the overlay cover the entire container */
+		height: 100%;
+	}
+
+	/* LEGENDS SECTION */
+
+	#legends h2 {
+		margin-left: 2rem;
+		margin-top: 1.2rem;
+	}
+
+	.legends-main-div {
+		padding: 2.8rem 2rem;
+		row-gap: 1.5rem;
+		column-gap: 1.5rem;
+	}
+
+	.legends-main-div img {
+		width: 340px;
+		height: 280px;
+	}
+
+	/* PLAYER SECTION */
+	.players-header::after {
+		left: 41.5%;
+	}
+
+	.btn-div {
+		padding: 1rem 2rem;
+	}
+
+	.player-info-div {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 2rem;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		color: #ffffff;
+	}
+
+	.men-players h2,
+	.player-info-div {
+		margin-left: 2rem;
+		margin-right: 4rem;
+	}
+
+	.player-info img {
+		width: 360px;
+		height: 290px;
+		object-fit: cover;
+	}
+
+	/* FOOTER SECTION */
+	footer {
+		height: 15vh;
+	}
+}
+
+/* MEDIA QUERY TARGETING SCREEN WIDTH BETWEEN 965px & 1172px */
+
+@media (min-width: 965px) and (max-width: 1172px) {
+	/* NAV SECTION */
+	nav {
+		padding: 6px 10px;
+	}
+
+	nav img {
+		margin-left: 4rem;
+	}
+
+	nav ul {
+		margin-right: 2rem;
+	}
+
+	/* ABOUT SECTION */
+
+	#about {
+		padding: 2rem 4rem;
+	}
+
+	#about h2 {
+		margin-bottom: 1rem;
+		margin-top: 2rem;
+	}
+
+	#about h3 {
+		margin-top: 0;
+		margin-bottom: 1rem;
+	}
+
+	/* ABOUT SECTION */
+
+	#about {
+		padding: 2rem 7rem;
+	}
+
+	.about-sub-main {
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 2rem 0.5rem;
+		row-gap: 3rem;
+	}
+
+	.about-sub-container1 img {
+		width: 400px;
+		height: 420px;
+		object-fit: fill;
+	}
+
+	.about-sub-container1 p {
+		padding: 1.4rem 3rem;
+		line-height: 1.9rem;
+		font-size: 1.1rem;
+		margin: auto 0;
+	}
+
+	.about-sub-container2 {
+		padding: 2rem 5rem;
+		line-height: 1.3rem;
+	}
+
+	.about-sub-container2 p {
+		font-weight: 500;
+		line-height: 2rem;
+		font-size: 1.2rem;
+	}
+
+	/* IMAGE SLIDER SECTION */
+
+	.image-slider {
+		width: 850px;
+		height: 460px;
+		border-radius: 10px;
+		overflow: hidden;
+		height: 60vh;
+	}
+
+	.slides {
+		width: 500%;
+		height: 500px;
+		display: flex;
+	}
+
+	.slides input {
+		display: none;
+	}
+
+	.slide {
+		width: 20%;
+		transition: 2s;
+	}
+
+	img.slide-image {
+		width: 810px;
+		height: 450px;
+		border-radius: 10px;
+		object-fit: contain;
+		filter: brightness(90%);
+		margin-right: 3rem;
+	}
+
+	.navigation-manual {
+		margin-top: 20px;
+		margin-left: 1rem;
+	}
+
+	.navigation-auto {
+		width: 700px;
+		justify-content: center;
+		margin-top: 15px;
+		margin-left: 2.5rem;
+	}
+
+	/* FANS SECTION */
+	.fans-main-div {
+		padding: 3rem 4rem;
+		margin-bottom: 2rem;
+		row-gap: 2rem;
+		column-gap: 2rem;
+		overflow: hidden;
+	}
+
+	.fans-main-div h2 ::after {
+		height: 1px; /* Adjust the thickness of the border */
+		width: 25%; /* Adjust this to control the width of the border */
+		bottom: 40px; /* Adjust the position of the border */
+	}
+
+	.fans-main-div img {
+		width: 450px;
+		height: 300px;
+	}
+
+	.fans-div .gradient-overlay,
+	.fans-div-1 .gradient-overlay,
+	.fans-div-2 .gradient-overlay,
+	.fans-div-3 .gradient-overlay {
+		width: 450px; /* Make the overlay cover the entire container */
+		height: 100%;
+	}
+
+	/* LEGENDS SECTION */
+
+	#legends h2 {
+		margin-left: 2rem;
+		margin-top: 1.2rem;
+	}
+
+	.legends-main-div {
+		padding: 2.8rem 2rem;
+		row-gap: 1.5rem;
+		column-gap: 1.5rem;
+	}
+
+	.legends-main-div img {
+		width: 280px;
+		height: 240px;
+	}
+
+	/* PLAYER SECTION */
+	.players-header::after {
+		left: 41.5%;
+	}
+
+	.btn-div {
+		padding: 1rem 2rem;
+	}
+
+	.player-info-div {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 2rem;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		color: #ffffff;
+	}
+
+	.men-players h2,
+	.player-info-div {
+		margin-left: 2rem;
+		margin-right: 4rem;
+	}
+
+	.player-info img {
+		width: 290px;
+		height: 230px;
+		object-fit: cover;
+	}
+
+	/* FOOTER SECTION */
+	footer {
+		height: 15vh;
+	}
+}
+
+/* MEDIA QUERY TARGETING SCREEN WIDTH BETWEEN 854px & 965px */
+
+@media (min-width: 854px) and (max-width: 965px) {
+	/* NAV SECTION */
+	nav {
+		padding: 6px 10px;
+	}
+
+	nav img {
+		width: 50px;
+		height: 50px;
+		margin-left: 2rem;
+	}
+
+	.logo-name h1 {
+		margin-left: 1rem;
+		font-size: 1.5rem;
+	}
+
+	nav ul {
+		margin-right: 1rem;
+	}
+
+	nav ul li a {
+		font-size: 1.1rem;
+	}
+
+	main video {
+		width: 100%;
+		aspect-ratio: 4/3;
+		margin-top: -5rem;
+	}
+
+	/* ABOUT SECTION */
+	/* ABOUT SECTION */
+
+	#about {
+		margin-top: -10rem;
+		padding: 1rem 4rem;
+	}
+
+	#about h2 {
+		margin-bottom: 1rem;
+		margin-top: 2rem;
+	}
+
+	#about h3 {
+		margin-top: 0;
+		margin-bottom: 1rem;
+	}
+
+	.about-sub-main {
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 2rem 0.5rem;
+		row-gap: 3rem;
+	}
+
+	.about-sub-container1 img {
+		width: 400px;
+		height: 420px;
+		object-fit: fill;
+	}
+
+	.about-sub-container1 p {
+		padding: 1.4rem 3rem;
+		line-height: 1.9rem;
+		font-size: 0.9rem;
+		margin: auto 0;
+	}
+
+	.about-sub-container2 {
+		padding: 2rem 2rem;
+		line-height: 1rem;
+	}
+
+	.about-sub-container2 p {
+		font-weight: 500;
+		line-height: 2rem;
+		font-size: 1rem;
+	}
+
+	/* IMAGE SLIDER SECTION */
+
+	.main-slider-container {
+		margin-top: 3rem;
+		padding-top: 3rem;
+	}
+
+	.image-slider {
+		width: 780px;
+		height: 430px;
+		border-radius: 10px;
+		overflow: hidden;
+		height: 58vh;
+	}
+
+	.slides {
+		width: 500%;
+		height: 500px;
+		display: flex;
+	}
+
+	.slides input {
+		display: none;
+	}
+
+	.slide {
+		width: 20%;
+		transition: 2s;
+	}
+
+	img.slide-image {
+		width: 770px;
+		height: 430px;
+		border-radius: 10px;
+		object-fit: contain;
+		filter: brightness(90%);
+		margin-right: 3rem;
+	}
+
+	.main-slider-container h2 {
+		font-size: 2rem;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		font-weight: 600;
+		margin-bottom: 2rem;
+	}
+
+	.main-slider-container h2::after {
+		content: '';
+		position: absolute;
+		display: inline-block;
+		border-top: 4px solid #c70101; /* Set the color and thickness of the border */
+		bottom: 50px; /* Adjust the position of the border */
+		height: 10px; /* Adjust the thickness of the border */
+		left: 0;
+		width: 20%; /* Adjust this to control the width of the border */
+	}
+
+	.navigation-manual {
+		margin-top: 20px;
+		margin-left: 1rem;
+	}
+
+	.navigation-auto {
+		width: 700px;
+		justify-content: center;
+		margin-top: 15px;
+		margin-left: 2.5rem;
+	}
+
+	/* FANS SECTION */
+	.fans-main-div {
+		padding: 3rem 2rem;
+		margin-bottom: 2rem;
+		row-gap: 1rem;
+		column-gap: 1rem;
+		overflow: hidden;
+	}
+
+	.fans-main-div h2 {
+		font-size: 1.8rem;
+		line-height: 1rem;
+	}
+
+	.fans-main-div h2 ::after {
+		height: 1px; /* Adjust the thickness of the border */
+		width: 25%; /* Adjust this to control the width of the border */
+		bottom: 30px; /* Adjust the position of the border */
+	}
+
+	.fans-main-div img {
+		width: 380px;
+		height: 280px;
+	}
+
+	.fans-div .gradient-overlay,
+	.fans-div-1 .gradient-overlay,
+	.fans-div-2 .gradient-overlay,
+	.fans-div-3 .gradient-overlay {
+		width: 380px; /* Make the overlay cover the entire container */
+		height: 100%;
+	}
+
+	/* LEGENDS SECTION */
+	#legends {
+		padding-top: 2rem;
+		margin-top: 2rem;
+	}
+
+	#legends h2 {
+		margin-left: 2rem;
+		margin-top: 1.2rem;
+		font-size: 2rem;
+	}
+
+	.legends-main-div {
+		padding: 2rem 2rem;
+		row-gap: 1.5rem;
+		column-gap: 1.5rem;
+	}
+
+	.legends-main-div img {
+		width: 250px;
+		height: 200px;
+	}
+
+	.legends-div p,
+	.legends-div-1 p,
+	.legends-div-2 p,
+	.legends-div-3 p,
+	.legends-div-4 p,
+	.legends-div-5 p,
+	.legends-div-6 p,
+	.legends-div-7 p,
+	.legends-div-8 p,
+	.legends-div-9 p,
+	.legends-div-10 p,
+	.legends-div-11 p,
+	.legends-div-12 p,
+	.legends-div-13 p,
+	.legends-div-14 p,
+	.legends-div-15 p,
+	.legends-div-16 p,
+	.legends-div-17 p,
+	.legends-div-18 p,
+	.legends-div-19 p,
+	.legends-div-20 p {
+		position: absolute;
+
+		left: 15px;
+		bottom: 30px;
+		font-size: 1.2rem;
+		filter: brightness(200%);
+	}
+
+	p.p1 {
+		position: absolute;
+		bottom: 40px;
+	}
+
+	p.p2 {
+		position: absolute;
+		bottom: 20px;
+	}
+
+	/* PLAYER SECTION */
+
+	#players {
+		margin-top: 2rem;
+	}
+
+	.players-header .fans-main-h2 {
+		font-size: 2rem;
+	}
+
+	.players-header {
+		padding-bottom: 1rem;
+		padding-top: 1rem;
+	}
+
+	.players-header::after {
+		left: 39.5%;
+		height: 2px; /* Adjust the thickness of the border */
+	}
+
+	.btn-div {
+		padding: 1rem 2rem;
+	}
+
+	.player-info-div {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 2rem;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		color: #ffffff;
+	}
+
+	.men-players h2,
+	.player-info-div {
+		margin-left: 2rem;
+		margin-right: 4rem;
+	}
+
+	.men-players h2 {
+		font-family: 'Montserrat', sans-serif, Helvetica;
+		font-size: 20px;
+		padding-top: 1rem;
+		padding-bottom: 0.8rem;
+		margin-bottom: 1rem;
+	}
+
+	.player-info img {
+		width: 240px;
+		height: 190px;
+		object-fit: cover;
+	}
+
+	span.player-name.firstname {
+		left: 15px;
+		bottom: 65px;
+		font-size: 30px;
+	}
+
+	span.player-name.lastname {
+		left: 15px;
+		bottom: 40px;
+		font-size: 30px;
+	}
+
+	p.player-number {
+		position: relative;
+		display: inline-block;
+		left: 15px;
+		bottom: 110px;
+		font-size: 1rem;
+	}
+
+	/* FOOTER SECTION */
+	footer {
+		height: 15vh;
+	}
+}
+
+/* MEDIA QUERY TARGETING SCREEN WIDTH BETWEEN 560px & 644px */
+
+@media (min-width: 560px) and (max-width: 644px) {
+	/* NAV SECTION */
+	/* nav {
+		padding: 6px 10px;
+	}
+
+	nav img {
+		width: 50px;
+		height: 50px;
+		margin-left: 2rem;
+	}
+
+	.logo-name h1 {
+		margin-left: 1rem;
+		font-size: 1.5rem;
+	}
+
+	nav ul {
+		margin-right: 1rem;
+	}
+
+	nav ul li a {
+		font-size: 1.1rem;
+	} */
+	/* NAV AND HAMBURGER MENU */
+	#hamburger-nav {
+		display: flex;
+	}
+
+	.hamburger-icon {
+		display: block;
+	}
+
+	#desktop-nav {
+		display: none;
+	}
+
+	main video {
+		width: 100%;
+		aspect-ratio: 4/3;
+		margin-top: -5rem;
+	}
+
+	/* ABOUT SECTION */
+	/* ABOUT SECTION */
+
+	#about {
+		margin-top: -5rem;
+		padding: 1rem 2rem;
+	}
+
+	#about h2 {
+		margin-bottom: 1rem;
+		margin-top: 2rem;
+	}
+
+	#about h3 {
+		margin-top: 0;
+		margin-bottom: 1rem;
+	}
+
+	.about-sub-main {
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 2rem 0.5rem;
+		row-gap: 3rem;
+	}
+
+	.about-sub-container1 {
+		display: flex;
+		justify-content: space-between;
+		overflow: hidden;
+		flex-direction: column;
+	}
+
+	.about-sub-container1 img {
+		width: 100%;
+		height: 420px;
+		object-fit: cover;
+	}
+
+	.about-sub-container1 p {
+		padding: 1.4rem 3rem;
+		line-height: 1.9rem;
+		font-size: 0.9rem;
+		margin: auto 0;
+	}
+
+	.about-sub-container2 {
+		padding: 2rem 2rem;
+		line-height: 1rem;
+	}
+
+	.about-sub-container2 p {
+		font-weight: 500;
+		line-height: 2rem;
+		font-size: 1rem;
+	}
+
+	/* Styling for the scroll to top button */
+	#btnScrollToTop {
+		display: none;
+	}
+
+	/* IMAGE SLIDER SECTION */
+
+	.main-slider-container {
+		margin-bottom: 2rem;
+	}
+
+	.main-slider-container {
+		margin-top: 1.3rem;
+		padding-top: 1rem;
+		padding-bottom: 0;
+	}
+
+	.main-slider-container h2 span {
+		font-size: 1.6rem;
+		padding: 0 1.3rem;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		font-weight: 600;
+		margin-bottom: 0;
+		position: relative;
+		display: inline-block; /* Ensures the border width matches the text content */
+		padding-top: -10px; /* Adjust as needed */
+	}
+
+	.main-slider-container h2::after {
+		bottom: 60px; /* Adjust the position of the border */
+		height: 0; /* Adjust the thickness of the border */
+		left: 0;
+		width: 20%; /* Adjust this to control the width of the border */
+	}
+
+	.image-slider {
+		width: 480px;
+		height: 320px;
+		border-radius: 10px;
+		overflow: hidden;
+		height: 40vh;
+	}
+
+	.slides {
+		width: 500%;
+		height: 450px;
+		display: flex;
+	}
+
+	.slides input {
+		display: none;
+	}
+
+	.slide {
+		width: 20%;
+		transition: 2s;
+	}
+
+	img.slide-image {
+		width: 450px;
+		height: 400px;
+		border-radius: 10px;
+		object-fit: contain;
+		filter: brightness(90%);
+		margin-right: 3rem;
+	}
+
+	.main-slider-container h2 {
+		font-size: 2rem;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+
+	.main-slider-container h2::after {
+		content: '';
+		position: absolute;
+		display: inline-block;
+		border-top: 4px solid #c70101; /* Set the color and thickness of the border */
+		bottom: 60px; /* Adjust the position of the border */
+		height: 10px; /* Adjust the thickness of the border */
+		left: 4%;
+		width: 20%; /* Adjust this to control the width of the border */
+	}
+
+	.navigation-manual {
+		margin-top: -60px;
+		margin-left: -20px;
+		width: 500px;
+	}
+
+	.navigation-auto {
+		display: none;
+	}
+
+	/* FANS SECTION */
+
+	.fans-main-div {
+		padding: 2rem 2rem;
+		margin-bottom: 2rem;
+		row-gap: 0.5rem;
+		column-gap: 0.5rem;
+		overflow: hidden;
+	}
+
+	.fans-main-div h2 {
+		font-size: 1.4rem;
+		line-height: 1rem;
+		left: 10px;
+		bottom: 20px;
+	}
+
+	.fans-main-div h2 ::after {
+		height: 1px; /* Adjust the thickness of the border */
+		width: 25%; /* Adjust this to control the width of the border */
+		bottom: 24px; /* Adjust the position of the border */
+	}
+
+	.fans-main-div img {
+		width: 240px;
+		height: 180px;
+	}
+
+	.fans-div .gradient-overlay,
+	.fans-div-1 .gradient-overlay,
+	.fans-div-2 .gradient-overlay,
+	.fans-div-3 .gradient-overlay {
+		width: 240px; /* Make the overlay cover the entire container */
+		height: 100%;
+	}
+
+	/* LEGENDS SECTION */
+	#legends {
+		padding-top: 2rem;
+		margin-top: 2rem;
+	}
+
+	#legends h2 {
+		margin-left: 2rem;
+		margin-top: 1.2rem;
+		font-size: 1.6rem;
+	}
+
+	.legends-main-div {
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 2rem 5rem;
+		row-gap: 1.5rem;
+		column-gap: 1.5rem;
+	}
+
+	.legends-main-div img {
+		width: 400px;
+		height: 280px;
+	}
+
+	.legends-div p,
+	.legends-div-1 p,
+	.legends-div-2 p,
+	.legends-div-3 p,
+	.legends-div-4 p,
+	.legends-div-5 p,
+	.legends-div-6 p,
+	.legends-div-7 p,
+	.legends-div-8 p,
+	.legends-div-9 p,
+	.legends-div-10 p,
+	.legends-div-11 p,
+	.legends-div-12 p,
+	.legends-div-13 p,
+	.legends-div-14 p,
+	.legends-div-15 p,
+	.legends-div-16 p,
+	.legends-div-17 p,
+	.legends-div-18 p,
+	.legends-div-19 p,
+	.legends-div-20 p {
+		position: absolute;
+
+		left: 15px;
+		bottom: 30px;
+		font-size: 1.2rem;
+		filter: brightness(200%);
+	}
+
+	p.p1 {
+		position: absolute;
+		bottom: 40px;
+	}
+
+	p.p2 {
+		position: absolute;
+		bottom: 20px;
+	}
+
+	/* PLAYER SECTION */
+
+	#players {
+		margin-top: 2rem;
+	}
+
+	.players-header .fans-main-h2 {
+		font-size: 2rem;
+	}
+
+	.players-header {
+		padding-bottom: 1rem;
+		padding-top: 1rem;
+	}
+
+	.players-header::after {
+		left: 39.5%;
+		height: 2px; /* Adjust the thickness of the border */
+	}
+
+	.btn-div {
+		padding: 1.2rem 2rem;
+		margin-top: 0;
+		top: 70px;
+	}
+
+	.player-info-div {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 2rem;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		color: #ffffff;
+	}
+
+	.men-players h2,
+	.player-info-div {
+		margin-left: 2rem;
+		margin-right: 4rem;
+	}
+
+	.men-players h2 {
+		font-family: 'Montserrat', sans-serif, Helvetica;
+		font-size: 20px;
+		padding-top: 1rem;
+		padding-bottom: 0.8rem;
+		margin-bottom: 1rem;
+	}
+
+	.player-info img {
+		width: 250px;
+		height: 190px;
+		object-fit: cover;
+	}
+
+	span.player-name.firstname {
+		left: 15px;
+		bottom: 65px;
+		font-size: 30px;
+	}
+
+	span.player-name.lastname {
+		left: 15px;
+		bottom: 40px;
+		font-size: 30px;
+	}
+
+	p.player-number {
+		position: relative;
+		display: inline-block;
+		left: 15px;
+		bottom: 110px;
+		font-size: 1rem;
+	}
+
+	/* FOOTER SECTION */
+	footer {
+		height: 15vh;
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+
+	.main-footer {
+		text-align: center;
+	}
+}
+
+/* MEDIA QUERY TARGETING SCREEN WIDTH BETWEEN 466px & 559px */
+
+@media (min-width: 466px) and (max-width: 559px) {
+	/* NAV SECTION */
+	/* NAV AND HAMBURGER MENU */
+	#hamburger-nav {
+		display: flex;
+	}
+
+	.hamburger-icon {
+		display: block;
+	}
+
+	#desktop-nav {
+		display: none;
+	}
+
+	main video {
+		width: 100%;
+		aspect-ratio: 4/3;
+		margin-top: -5rem;
+	}
+
+	/* ABOUT SECTION */
+	/* ABOUT SECTION */
+
+	#about {
+		margin-top: -3rem;
+		padding: 1rem 0;
+	}
+
+	#about h2 {
+		margin-bottom: 1rem;
+		margin-top: 2rem;
+		margin-left: 1rem;
+	}
+
+	#about h3 {
+		margin-top: 0;
+		margin-bottom: 0.5rem;
+	}
+
+	.about-sub-main {
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 2rem 0;
+		row-gap: 3rem;
+	}
+
+	.about-sub-container1 {
+		display: flex;
+		justify-content: space-between;
+		overflow: hidden;
+		flex-direction: column;
+	}
+
+	.about-sub-container1 img {
+		width: 100%;
+		height: 420px;
+		object-fit: cover;
+	}
+
+	.about-sub-container1 p {
+		padding: 1.4rem 3rem;
+		line-height: 1.9rem;
+		font-size: 0.9rem;
+		margin: auto 0;
+	}
+
+	.about-sub-container2 {
+		padding: 2rem 2rem;
+		line-height: 1rem;
+	}
+
+	.about-sub-container2 p {
+		font-weight: 500;
+		line-height: 2rem;
+		font-size: 1rem;
+	}
+
+	/* Styling for the scroll to top button */
+	#btnScrollToTop {
+		display: none;
+	}
+
+	/* IMAGE SLIDER SECTION */
+
+	.main-slider-container {
+		margin-bottom: 2rem;
+	}
+
+	.main-slider-container {
+		margin-top: 1.3rem;
+		padding-top: 1rem;
+		padding-bottom: 0;
+	}
+
+	.main-slider-container h2 span {
+		font-size: 1.6rem;
+		padding: 0 1.3rem;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		font-weight: 600;
+		margin-bottom: 0;
+		position: relative;
+		display: inline-block; /* Ensures the border width matches the text content */
+		padding-top: -10px; /* Adjust as needed */
+	}
+
+	.main-slider-container h2::after {
+		bottom: 60px; /* Adjust the position of the border */
+		height: 0; /* Adjust the thickness of the border */
+		left: 0;
+		width: 20%; /* Adjust this to control the width of the border */
+	}
+
+	.image-slider {
+		width: 460px;
+		height: 320px;
+		border-radius: 10px;
+		overflow: hidden;
+		height: 40vh;
+	}
+
+	.slides {
+		width: 500%;
+		height: 450px;
+		display: flex;
+	}
+
+	.slides input {
+		display: none;
+	}
+
+	.slide {
+		width: 20%;
+		transition: 2s;
+	}
+
+	img.slide-image {
+		width: 450px;
+		height: 400px;
+		border-radius: 10px;
+		object-fit: contain;
+		filter: brightness(90%);
+		margin-right: 3rem;
+	}
+
+	.main-slider-container h2 {
+		font-size: 2rem;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+
+	.main-slider-container h2::after {
+		content: '';
+		position: absolute;
+		display: inline-block;
+		border-top: 4px solid #c70101; /* Set the color and thickness of the border */
+		bottom: 60px; /* Adjust the position of the border */
+		height: 10px; /* Adjust the thickness of the border */
+		left: 4%;
+		width: 20%; /* Adjust this to control the width of the border */
+	}
+
+	.navigation-manual {
+		margin-top: -60px;
+		margin-left: -20px;
+		width: 500px;
+	}
+
+	.navigation-auto {
+		display: none;
+	}
+
+	/* FANS SECTION */
+
+	.fans-header .fans-main-h2 {
+		font-size: 2.2rem;
+	}
+
+	.fans-main-div {
+		padding: 2rem 2.8rem;
+		margin-bottom: 2rem;
+		column-gap: 0.5rem;
+		overflow: hidden;
+
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	.fans-main-div h2 {
+		font-size: 1.6rem;
+		line-height: 1rem;
+		left: 10px;
+		bottom: 20px;
+	}
+
+	.fans-main-div h2 ::after {
+		height: 1px; /* Adjust the thickness of the border */
+		width: 25%; /* Adjust this to control the width of the border */
+		bottom: 24px; /* Adjust the position of the border */
+	}
+
+	.fans-main-div img {
+		width: 380px;
+		height: 240px;
+	}
+
+	.fans-div .gradient-overlay,
+	.fans-div-1 .gradient-overlay,
+	.fans-div-2 .gradient-overlay,
+	.fans-div-3 .gradient-overlay {
+		width: 380px; /* Make the overlay cover the entire container */
+		height: 100%;
+	}
+
+	/* LEGENDS SECTION */
+	#legends {
+		padding-top: 2rem;
+		margin-top: 2rem;
+	}
+
+	#legends h2 {
+		margin-left: 0.3rem;
+		margin-top: 1.2rem;
+		font-size: 1.6rem;
+		line-height: 1.8rem;
+	}
+
+	#legends h2::after {
+		bottom: 80px; /* Adjust the position of the border */
+		height: 10px; /* Adjust the thickness of the border */
+		left: 4%;
+	}
+
+	.legends-main-div {
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 2rem 2.8rem;
+		row-gap: 1.5rem;
+		column-gap: 1.5rem;
+	}
+
+	.legends-main-div img {
+		width: 380px;
+		height: 240px;
+	}
+
+	.legends-div p,
+	.legends-div-1 p,
+	.legends-div-2 p,
+	.legends-div-3 p,
+	.legends-div-4 p,
+	.legends-div-5 p,
+	.legends-div-6 p,
+	.legends-div-7 p,
+	.legends-div-8 p,
+	.legends-div-9 p,
+	.legends-div-10 p,
+	.legends-div-11 p,
+	.legends-div-12 p,
+	.legends-div-13 p,
+	.legends-div-14 p,
+	.legends-div-15 p,
+	.legends-div-16 p,
+	.legends-div-17 p,
+	.legends-div-18 p,
+	.legends-div-19 p,
+	.legends-div-20 p {
+		position: absolute;
+
+		left: 15px;
+		bottom: 30px;
+		font-size: 1.4rem;
+		filter: brightness(200%);
+	}
+
+	p.p1 {
+		position: absolute;
+		bottom: 40px;
+	}
+
+	p.p2 {
+		position: absolute;
+		bottom: 20px;
+	}
+
+	/* PLAYER SECTION */
+
+	#players {
+		margin-top: 2rem;
+	}
+
+	.players-header .fans-main-h2 {
+		font-size: 2rem;
+	}
+
+	.players-header {
+		padding-bottom: 1rem;
+		padding-top: 1rem;
+	}
+
+	.players-header::after {
+		left: 39.5%;
+		height: 2px; /* Adjust the thickness of the border */
+	}
+
+	.btn-div {
+		padding: 1.2rem 2rem;
+		margin-top: 0;
+		top: 70px;
+	}
+
+	.player-info-div {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 1rem;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		color: #ffffff;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.men-players h2,
+	.player-info-div {
+		margin-left: 2rem;
+		margin-right: 4rem;
+	}
+
+	.men-players h2 {
+		font-family: 'Montserrat', sans-serif, Helvetica;
+		font-size: 20px;
+		padding-top: 1rem;
+		padding-bottom: 0.8rem;
+		margin-bottom: 1rem;
+	}
+
+	.player-info img {
+		width: 200px;
+		height: 160px;
+		object-fit: cover;
+	}
+
+	span.player-name.firstname {
+		left: 15px;
+		bottom: 65px;
+		font-size: 30px;
+	}
+
+	span.player-name.lastname {
+		left: 15px;
+		bottom: 40px;
+		font-size: 30px;
+	}
+
+	p.player-number {
+		position: relative;
+		display: inline-block;
+		left: 15px;
+		bottom: 110px;
+		font-size: 1rem;
+	}
+
+	/* FOOTER SECTION */
+	footer {
+		height: 17vh;
+		padding-left: 5rem;
+		padding-right: 5rem;
+	}
+
+	.main-footer,
+	.attribute {
+		text-align: center;
+	}
+}
+
+/* MEDIA QUERY TARGETING SCREEN WIDTH BETWEEN 391px & 465px */
+
+@media (min-width: 391px) and (max-width: 465px) {
+	/* NAV SECTION */
+	/* NAV AND HAMBURGER MENU */
+
+	#hamburger-nav {
+		display: flex;
+	}
+
+	.hamburger-icon {
+		display: block;
+	}
+
+	#desktop-nav {
+		display: none;
+	}
+
+	/* nav {
+		padding: 6px 10px;
+	}
+
+	nav img {
+		width: 50px;
+		height: 50px;
+		margin-left: 2rem;
+	}
+
+	.logo-name h1 {
+		margin-left: 1rem;
+		font-size: 1.5rem;
+	}
+
+	nav ul {
+		margin-right: 1rem;
+	}
+
+	nav ul li a {
+		font-size: 1.1rem;
+	} */
+
+	main video {
+		width: 100%;
+		aspect-ratio: 4/3;
+		margin-top: -5rem;
+	}
+
+	/* ABOUT SECTION */
+	/* ABOUT SECTION */
+
+	#about {
+		margin-top: -3rem;
+		padding: 1rem 0;
+	}
+
+	#about h2 {
+		margin-bottom: 1rem;
+		margin-top: 2rem;
+		margin-left: 1rem;
+	}
+
+	#about h3 {
+		margin-top: 0;
+		margin-bottom: 0.5rem;
+	}
+
+	.about-sub-main {
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 2rem 0;
+		row-gap: 3rem;
+	}
+
+	.about-sub-container1 {
+		display: flex;
+		justify-content: space-between;
+		overflow: hidden;
+		flex-direction: column;
+	}
+
+	.about-sub-container1 img {
+		width: 100%;
+		height: 420px;
+		object-fit: cover;
+	}
+
+	.about-sub-container1 p {
+		padding: 1.4rem 3rem;
+		line-height: 1.9rem;
+		font-size: 0.9rem;
+		margin: auto 0;
+	}
+
+	.about-sub-container2 {
+		padding: 2rem 2rem;
+		line-height: 1rem;
+	}
+
+	.about-sub-container2 p {
+		font-weight: 500;
+		line-height: 2rem;
+		font-size: 1rem;
+	}
+
+	/* Styling for the scroll to top button */
+	#btnScrollToTop {
+		display: none;
+	}
+
+	/* IMAGE SLIDER SECTION */
+
+	.main-slider-container {
+		margin-bottom: 2rem;
+	}
+
+	.main-slider-container {
+		margin-top: 1.3rem;
+		padding-top: 1rem;
+		padding-bottom: 0;
+	}
+
+	.main-slider-container h2 span {
+		font-size: 1.6rem;
+		padding: 0 1.3rem;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		font-weight: 600;
+		margin-bottom: 0;
+		position: relative;
+		display: inline-block; /* Ensures the border width matches the text content */
+		padding-top: -10px; /* Adjust as needed */
+	}
+
+	.main-slider-container h2::after {
+		bottom: 60px; /* Adjust the position of the border */
+		height: 0; /* Adjust the thickness of the border */
+		left: 0;
+		width: 20%; /* Adjust this to control the width of the border */
+	}
+
+	.image-slider {
+		width: 400px;
+		height: 320px;
+		border-radius: 10px;
+		overflow: hidden;
+		height: 33vh;
+	}
+
+	.slides {
+		width: 500%;
+		height: 450px;
+		display: flex;
+	}
+
+	.slides input {
+		display: none;
+	}
+
+	.slide {
+		width: 20%;
+		transition: 2s;
+	}
+
+	img.slide-image {
+		width: 390px;
+		height: 350px;
+		border-radius: 10px;
+		object-fit: contain;
+		filter: brightness(90%);
+		margin-right: 3rem;
+	}
+
+	img.slide-image .last-slider-image {
+		margin-right: 6rem;
+	}
+
+	.main-slider-container h2 {
+		font-size: 2rem;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+
+	.main-slider-container h2::after {
+		content: '';
+		position: absolute;
+		display: inline-block;
+		border-top: 4px solid #c70101; /* Set the color and thickness of the border */
+		bottom: 60px; /* Adjust the position of the border */
+		height: 10px; /* Adjust the thickness of the border */
+		left: 4%;
+		width: 20%; /* Adjust this to control the width of the border */
+	}
+
+	.navigation-manual {
+		margin-top: -110px;
+		margin-left: 40px;
+		width: 300px;
+	}
+
+	.manual-btn {
+		padding: 6px;
+		border-radius: 12px;
+	}
+
+	.navigation-auto {
+		display: none;
+	}
+
+	/* FANS SECTION */
+
+	.fans-header .fans-main-h2 {
+		font-size: 1.8rem;
+	}
+
+	.fans-main-div {
+		padding: 2rem 0;
+		margin-bottom: 2rem;
+		column-gap: 0.5rem;
+		overflow: hidden;
+
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	.fans-main-div h2 {
+		font-size: 1.6rem;
+		line-height: 1rem;
+		left: 10px;
+		bottom: 20px;
+	}
+
+	.fans-main-div h2 ::after {
+		height: 1px; /* Adjust the thickness of the border */
+		width: 25%; /* Adjust this to control the width of the border */
+		bottom: 24px; /* Adjust the position of the border */
+	}
+
+	.fans-main-div img {
+		width: 100%;
+		height: 240px;
+		border-radius: 0;
+	}
+
+	.fans-div .gradient-overlay,
+	.fans-div-1 .gradient-overlay,
+	.fans-div-2 .gradient-overlay,
+	.fans-div-3 .gradient-overlay {
+		width: 100%; /* Make the overlay cover the entire container */
+		height: 100%;
+	}
+
+	/* LEGENDS SECTION */
+	#legends {
+		padding-top: 2rem;
+		margin-top: 2rem;
+	}
+
+	#legends h2 {
+		margin-left: 0.5rem;
+		margin-top: 1.2rem;
+		font-size: 1.6rem;
+		line-height: 1.8rem;
+		text-align: start;
+	}
+
+	#legends h2::after {
+		bottom: 80px; /* Adjust the position of the border */
+		height: 10px; /* Adjust the thickness of the border */
+		left: 1%;
+	}
+
+	.legends-main-div {
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 2rem 1.8rem;
+		row-gap: 1.5rem;
+		column-gap: 1.5rem;
+	}
+
+	.legends-main-div img {
+		width: 340px;
+		height: 210px;
+	}
+
+	.legends-div p,
+	.legends-div-1 p,
+	.legends-div-2 p,
+	.legends-div-3 p,
+	.legends-div-4 p,
+	.legends-div-5 p,
+	.legends-div-6 p,
+	.legends-div-7 p,
+	.legends-div-8 p,
+	.legends-div-9 p,
+	.legends-div-10 p,
+	.legends-div-11 p,
+	.legends-div-12 p,
+	.legends-div-13 p,
+	.legends-div-14 p,
+	.legends-div-15 p,
+	.legends-div-16 p,
+	.legends-div-17 p,
+	.legends-div-18 p,
+	.legends-div-19 p,
+	.legends-div-20 p {
+		position: absolute;
+
+		left: 15px;
+		bottom: 30px;
+		font-size: 1.4rem;
+		filter: brightness(200%);
+	}
+
+	p.p1 {
+		position: absolute;
+		bottom: 40px;
+	}
+
+	p.p2 {
+		position: absolute;
+		bottom: 20px;
+	}
+
+	/* PLAYER SECTION */
+
+	#players {
+		margin-top: 2rem;
+	}
+
+	.players-header .fans-main-h2 {
+		font-size: 2rem;
+	}
+
+	.players-header {
+		padding-bottom: 1rem;
+		padding-top: 1rem;
+	}
+
+	.players-header::after {
+		left: 25.5%;
+		height: 2px; /* Adjust the thickness of the border */
+		width: 15%;
+	}
+
+	.btn-div {
+		padding: 1.2rem 2rem;
+		margin-top: 0;
+		top: 70px;
+	}
+
+	.player-info-div {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 0.7rem;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		color: #ffffff;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.men-players h2 {
+		margin-left: 2rem;
+		margin-right: 4rem;
+	}
+
+	.player-info-div {
+		margin-left: 0.5rem;
+		margin-right: 2rem;
+	}
+
+	.men-players h2 {
+		font-family: 'Montserrat', sans-serif, Helvetica;
+		font-size: 20px;
+		padding-top: 1rem;
+		padding-bottom: 0.8rem;
+		margin-bottom: 1rem;
+	}
+
+	.player-info img {
+		width: 180px;
+		height: 140px;
+		object-fit: cover;
+	}
+
+	span.player-name.firstname {
+		left: 15px;
+		bottom: 65px;
+		font-size: 30px;
+	}
+
+	span.player-name.lastname {
+		left: 15px;
+		bottom: 40px;
+		font-size: 30px;
+	}
+
+	p.player-number {
+		position: relative;
+		display: inline-block;
+		left: 15px;
+		bottom: 110px;
+		font-size: 1rem;
+	}
+
+	/* FOOTER SECTION */
+	footer {
+		height: 17vh;
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+
+	.main-footer,
+	.attribute {
+		text-align: center;
+	}
+
+	p.disclaimer {
+		font-weight: 700;
+		font: 10px;
+	}
+}
+
+/* MEDIA QUERY TARGETING SCREEN WIDTH of 391PX*/
+
+@media (max-width: 390px) {
+	/* NAV SECTION */
+	#hamburger-nav {
+		display: flex;
+	}
+
+	.hamburger-icon {
+		display: block;
+	}
+
+	#desktop-nav {
+		display: none;
+	}
+
+	main video {
+		width: 100%;
+		aspect-ratio: 4/3;
+		margin-top: -5rem;
+	}
+
+	/* ABOUT SECTION */
+	/* ABOUT SECTION */
+
+	#about {
+		margin-top: -3rem;
+		padding: 1rem 0;
+	}
+
+	#about h2 {
+		margin-bottom: 1rem;
+		margin-top: 2rem;
+		margin-left: 1rem;
+	}
+
+	#about h3 {
+		margin-top: 0;
+		margin-bottom: 0.5rem;
+	}
+
+	.about-sub-main {
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 2rem 0;
+		row-gap: 3rem;
+	}
+
+	.about-sub-container1 {
+		display: flex;
+		justify-content: space-between;
+		overflow: hidden;
+		flex-direction: column;
+	}
+
+	.about-sub-container1 img {
+		width: 100%;
+		height: 420px;
+		object-fit: cover;
+	}
+
+	.about-sub-container1 p {
+		padding: 1.4rem 2rem;
+		line-height: 1.9rem;
+		font-size: 0.9rem;
+		margin: auto 0;
+	}
+
+	.about-sub-container2 {
+		padding: 2rem 2rem;
+		line-height: 1rem;
+	}
+
+	.about-sub-container2 p {
+		font-weight: 500;
+		line-height: 2rem;
+		font-size: 1rem;
+	}
+
+	/* Styling for the scroll to top button */
+	#btnScrollToTop {
+		display: none;
+	}
+
+	/* IMAGE SLIDER SECTION */
+
+	.main-slider-container {
+		margin-bottom: 2rem;
+	}
+
+	.main-slider-container {
+		margin-top: 1.3rem;
+		padding-top: 1rem;
+		padding-bottom: 0;
+	}
+
+	.main-slider-container h2 span {
+		font-size: 1.6rem;
+		padding: 0 1.3rem;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		font-weight: 600;
+		margin-bottom: 0;
+		position: relative;
+		display: inline-block; /* Ensures the border width matches the text content */
+		padding-top: -10px; /* Adjust as needed */
+	}
+
+	.main-slider-container h2::after {
+		bottom: 60px; /* Adjust the position of the border */
+		height: 0; /* Adjust the thickness of the border */
+		left: 0;
+		width: 20%; /* Adjust this to control the width of the border */
+	}
+
+	.image-slider {
+		width: 400px;
+		height: 320px;
+		border-radius: 10px;
+		overflow: hidden;
+		height: 33vh;
+	}
+
+	.slides {
+		width: 500%;
+		height: 450px;
+		display: flex;
+	}
+
+	.slides input {
+		display: none;
+	}
+
+	.slide {
+		width: 20%;
+		transition: 2s;
+	}
+
+	img.slide-image {
+		width: 390px;
+		height: 350px;
+		border-radius: 10px;
+		object-fit: contain;
+		filter: brightness(90%);
+		margin-right: 3rem;
+	}
+
+	img.slide-image .last-slider-image {
+		margin-right: 6rem;
+	}
+
+	.main-slider-container h2 {
+		font-size: 2rem;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		font-weight: 600;
+		margin-bottom: 0;
+	}
+
+	.main-slider-container h2::after {
+		content: '';
+		position: absolute;
+		display: inline-block;
+		border-top: 4px solid #c70101; /* Set the color and thickness of the border */
+		bottom: 60px; /* Adjust the position of the border */
+		height: 10px; /* Adjust the thickness of the border */
+		left: 4%;
+		width: 20%; /* Adjust this to control the width of the border */
+	}
+
+	.navigation-manual {
+		margin-top: -110px;
+		margin-left: 40px;
+		width: 300px;
+	}
+
+	.manual-btn {
+		padding: 6px;
+		border-radius: 12px;
+	}
+
+	.navigation-auto {
+		display: none;
+	}
+
+	/* FANS SECTION */
+
+	.fans-header .fans-main-h2 {
+		font-size: 1.8rem;
+	}
+
+	.fans-main-div {
+		padding: 2rem 0;
+		margin-bottom: 2rem;
+		column-gap: 0.5rem;
+		overflow: hidden;
+
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	.fans-main-div h2 {
+		font-size: 1.6rem;
+		line-height: 1rem;
+		left: 10px;
+		bottom: 20px;
+	}
+
+	.fans-main-div h2 ::after {
+		height: 1px; /* Adjust the thickness of the border */
+		width: 25%; /* Adjust this to control the width of the border */
+		bottom: 24px; /* Adjust the position of the border */
+	}
+
+	.fans-main-div img {
+		width: 100%;
+		height: 240px;
+		border-radius: 0;
+	}
+
+	.fans-div .gradient-overlay,
+	.fans-div-1 .gradient-overlay,
+	.fans-div-2 .gradient-overlay,
+	.fans-div-3 .gradient-overlay {
+		width: 100%; /* Make the overlay cover the entire container */
+		height: 100%;
+	}
+
+	/* LEGENDS SECTION */
+	#legends {
+		padding-top: 2rem;
+		margin-top: 2rem;
+	}
+
+	#legends h2 {
+		margin-left: 1.5rem;
+		margin-right: 1rem;
+		margin-top: 1.2rem;
+		font-size: 1.6rem;
+		line-height: 1.8rem;
+		text-align: start;
+	}
+
+	#legends h2::after {
+		bottom: 80px; /* Adjust the position of the border */
+		height: 10px; /* Adjust the thickness of the border */
+		left: 1%;
+	}
+
+	.legends-main-div {
+		display: grid;
+		grid-template-columns: 1fr;
+		padding: 2rem 1.4rem;
+		row-gap: 1.5rem;
+		column-gap: 1.5rem;
+	}
+
+	.legends-main-div img {
+		width: 340px;
+		height: 210px;
+	}
+
+	.legends-div p,
+	.legends-div-1 p,
+	.legends-div-2 p,
+	.legends-div-3 p,
+	.legends-div-4 p,
+	.legends-div-5 p,
+	.legends-div-6 p,
+	.legends-div-7 p,
+	.legends-div-8 p,
+	.legends-div-9 p,
+	.legends-div-10 p,
+	.legends-div-11 p,
+	.legends-div-12 p,
+	.legends-div-13 p,
+	.legends-div-14 p,
+	.legends-div-15 p,
+	.legends-div-16 p,
+	.legends-div-17 p,
+	.legends-div-18 p,
+	.legends-div-19 p,
+	.legends-div-20 p {
+		position: absolute;
+
+		left: 15px;
+		bottom: 30px;
+		font-size: 1.4rem;
+		filter: brightness(200%);
+	}
+
+	p.p1 {
+		position: absolute;
+		bottom: 40px;
+	}
+
+	p.p2 {
+		position: absolute;
+		bottom: 20px;
+	}
+
+	/* PLAYER SECTION */
+
+	#players {
+		margin-top: 2rem;
+	}
+
+	.players-header .fans-main-h2 {
+		font-size: 2rem;
+	}
+
+	.players-header {
+		padding-bottom: 1rem;
+		padding-top: 1rem;
+	}
+
+	.players-header::after {
+		left: 25.5%;
+		height: 2px; /* Adjust the thickness of the border */
+		width: 15%;
+	}
+
+	.btn-div {
+		padding: 1.2rem 2rem;
+		margin-top: 0;
+		top: 70px;
+	}
+
+	.player-info-div {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 0.5rem;
+		row-gap: 0;
+		font-family: 'Bebas Neue', Helvetica, sans-serif;
+		color: #ffffff;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.men-players h2 {
+		margin-left: 2rem;
+		margin-right: 4rem;
+	}
+
+	.player-info-div {
+		margin-left: 0.3rem;
+		margin-right: 2rem;
+	}
+
+	.men-players h2 {
+		font-family: 'Montserrat', sans-serif, Helvetica;
+		font-size: 20px;
+		padding-top: 1rem;
+		padding-bottom: 0.8rem;
+		margin-bottom: 1rem;
+	}
+
+	.player-info img {
+		width: 180px;
+		height: 140px;
+		object-fit: cover;
+	}
+
+	span.player-name.firstname {
+		left: 15px;
+		bottom: 65px;
+		font-size: 30px;
+	}
+
+	span.player-name.lastname {
+		left: 15px;
+		bottom: 40px;
+		font-size: 30px;
+	}
+
+	p.player-number {
+		position: relative;
+		display: inline-block;
+		left: 15px;
+		bottom: 110px;
+		font-size: 1rem;
+	}
+
+	/* FOOTER SECTION */
+	footer {
+		height: 21vh;
+		padding-left: 3rem;
+		padding-right: 3rem;
+		padding-top: 2rem;
+	}
+
+	.main-footer,
+	.attribute {
+		text-align: center;
+	}
+
+	p.disclaimer {
+		font-weight: 700;
+		font: 10px;
+	}
 }

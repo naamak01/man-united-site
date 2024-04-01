@@ -6,7 +6,7 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-		<link rel="icon" type="image/svg+xml" href="./public/favicon.ico" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -23,32 +23,61 @@
 			href="https://fonts.googleapis.com/icon?family=Material+Icons"
 			rel="stylesheet"
 		/>
-
 		<title>Practice | Man United</title>
 	</head>
 	<body>
+		<header></header>
 		<!-- NAV MENU CODE -->
-		<nav>
+		<nav id="desktop-nav">
 			<div class="logo-name">
 				<a href="./index.html"
-					><img src="./public/logo.png" alt="manchester united logo" />
+					><img src="/logo.png" alt="manchester united logo" />
 				</a>
 				<h1>Manchester United</h1>
 			</div>
 			<ul>
 				<li><a href="./index.html">Home</a></li>
 				<li><a href="#fans">Fans</a></li>
-				<li><a href="#players">Players</a></li>
 				<li><a href="#legends">Legends</a></li>
+				<li><a href="#players">Players</a></li>
 				<li><a href="#about">About</a></li>
 			</ul>
 		</nav>
 		<!-- END OF NAV SECTION -->
 
+		<!-- Hamburger Nav -->
+		<nav id="hamburger-nav">
+			<a href="./index.html"
+				><img src="/logo.png" alt="manchester united logo" />
+			</a>
+
+			<ul class="nav-menu">
+				<li><a href="./index.html" class="nav-links">Home</a></li>
+				<li>
+					<a href="#fans" class="nav-links">Fans</a>
+				</li>
+				<li>
+					<a href="#legends" class="nav-links">Legends</a>
+				</li>
+				<li>
+					<a href="#players" class="nav-links">Players</a>
+				</li>
+				<li>
+					<a href="#about" class="nav-links">About</a>
+				</li>
+			</ul>
+
+			<div class="hamburger-icon">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</nav>
+
 		<!-- MAIN SECTION -->
 		<main>
 			<video autoplay loop muted>
-				<source src="./public/video.mp4" type="video/mp4" />
+				<source src="/video.mp4" type="video/mp4" />
 				Your browser does not support the video tag.
 			</video>
 
@@ -68,7 +97,7 @@
 							COMMUNITY OF 1.1 BILLION FANS AND FOLLOWERS.
 						</p>
 						<img
-							src="./public/old-trafford.jpg"
+							src="/old-trafford.jpg"
 							alt="Image of the Old Trafford of Man United"
 						/>
 					</div>
@@ -125,58 +154,58 @@
 						<!-- slides images start-->
 						<div class="slide first">
 							<img
-								src="./public/manu-hostspurs-fans.webp"
+								src="/manu-hostspurs-fans.webp"
 								alt="amn united fans attending game against spurs home image"
 								class="slide-image"
 							/>
 						</div>
 						<div class="slide">
 							<img
-								src="./public/man-mens-training.jpg"
+								src="/man-mens-training.jpg"
 								alt="Man united mens team with Licha image"
 								class="slide-image"
 							/>
 						</div>
 						<div class="slide">
 							<img
-								src="./public/GettyImages_womentraining.webp"
+								src="/GettyImages_womentraining.webp"
 								alt="image man united womens team training by Getty Image"
 								class="slide-image"
 							/>
 						</div>
 						<div class="slide">
 							<img
-								src="./public/old-tradford-slider.jpg"
+								src="/old-tradford-slider.jpg"
 								alt="image of old trafford and the hugging statue"
 								class="slide-image"
 							/>
 						</div>
 						<div class="slide">
 							<img
-								src="./public/wan-bissaka.jpg"
+								src="/wan-bissaka.jpg"
 								alt="Image of Wan Bissaka training"
 								class="slide-image"
 							/>
 						</div>
 						<div class="slide">
 							<img
-								src="./public/GettyImages-fans.jpg"
+								src="/GettyImages-fans.jpg"
 								alt="Image of man united fans cheering and supporting at old trafford"
 								class="slide-image"
 							/>
 						</div>
 						<div>
 							<img
-								src="./public/united-youth.webp"
+								src="/united-youth.webp"
 								alt="Image of man united youth players after a goal scroed"
 								class="slide-image"
 							/>
 						</div>
 						<div>
 							<img
-								src="./public/womens-team.webp"
+								src="/womens-team.webp"
 								alt="Image of man united womens team lunching jersey"
-								class="slide-image"
+								class="slide-image last-slider-image"
 							/>
 						</div>
 
@@ -224,7 +253,7 @@
 				<div class="fans-main-div">
 					<div class="fans-div animating-container">
 						<img
-							src="./public/fans-1.webp"
+							src="/fans-1.webp"
 							alt="man united fans happy holding jerserys and banners"
 						/>
 						<h2><span>Love Around the World</span></h2>
@@ -233,7 +262,7 @@
 
 					<div class="fans-div-1 animating-container">
 						<img
-							src="./public/fans-2.webp"
+							src="/fans-2.webp"
 							alt="group of teenage man united fans on a field are Carrington in Manchester"
 						/>
 						<h2><span>Young Lads Representing</span></h2>
@@ -242,7 +271,7 @@
 
 					<div class="fans-div-2 animating-container">
 						<img
-							src="./public/fans-3.webp"
+							src="/fans-3.webp"
 							alt="Fans from canada at the stadium supporting man united at a game"
 						/>
 						<h2><span>Canadian Fans</span></h2>
@@ -251,7 +280,7 @@
 
 					<div class="fans-div-3 animating-container">
 						<img
-							src="./public/fans-4.webp"
+							src="/fans-4.webp"
 							alt="Man united fans from Cyprus showing love and represting"
 						/>
 						<h2><span>Love from Cyprus</span></h2>
@@ -270,7 +299,7 @@
 				<div class="legends-main-div">
 					<div class="legends-div animating-container">
 						<img
-							src="./public/George-best.jpg"
+							src="/George-best.jpg"
 							alt="image of united legend george best by Getty Images"
 						/>
 						<p>George Best: 1963&ndash;1974</p>
@@ -278,7 +307,7 @@
 
 					<div class="legends-div-1 animating-container">
 						<img
-							src="./public/alex-furguson.jpg"
+							src="/alex-furguson.jpg"
 							alt="image of united legend alex-furguson by Getty Images"
 						/>
 						<p>Sir Alex Ferguson: 1986&ndash;2013</p>
@@ -286,7 +315,7 @@
 
 					<div class="legends-div-2 animating-container">
 						<img
-							src="./public/ryan-giggs.jpg"
+							src="/ryan-giggs.jpg"
 							alt="image of united legend ryan giggs by Getty Images"
 						/>
 						<p>Ryan Giggs: 1990&ndash;2014</p>
@@ -294,7 +323,7 @@
 
 					<div class="legends-div-3 animating-container">
 						<img
-							src="./public/bobby-charlton.jpg"
+							src="/bobby-charlton.jpg"
 							alt="image of united legend bobby charlton by Getty Images"
 						/>
 						<p>Sir Bobby charlton: 1954&ndash;1973</p>
@@ -302,7 +331,7 @@
 
 					<div class="legends-div-4 animating-container">
 						<img
-							src="./public/eric-cantona.jpg"
+							src="/eric-cantona.jpg"
 							alt="image of united legend eric cantona by Getty Images"
 						/>
 						<p>Eric Cantona: 1992&ndash;1997</p>
@@ -310,7 +339,7 @@
 
 					<div class="legends-div-5 animating-container">
 						<img
-							src="./public/bryan-robson.jpg"
+							src="/bryan-robson.jpg"
 							alt="image of united legend bryan robson by Getty Images"
 						/>
 						<p>Bryan Robson: 1981&ndash;1994</p>
@@ -318,7 +347,7 @@
 
 					<div class="legends-div-6 animating-container">
 						<img
-							src="./public/dennis-law.jpg"
+							src="/dennis-law.jpg"
 							alt="image of united legend dennis law by Getty Images"
 						/>
 						<p>Dennis Law: 1962&ndash;1973</p>
@@ -326,7 +355,7 @@
 
 					<div class="legends-div-7 animating-container">
 						<img
-							src="./public/roy-keane.jpg"
+							src="/roy-keane.jpg"
 							alt="image of united legend roy keane by Getty Images"
 						/>
 						<p>Roy Keane: 1993&ndash;2006</p>
@@ -334,7 +363,7 @@
 
 					<div class="legends-div-8 animating-container">
 						<img
-							src="./public/paul-scholes.jpg"
+							src="/paul-scholes.jpg"
 							alt="image of united legend paul scholes by Getty Images"
 						/>
 						<p>Paul Scholes: 1994&ndash;2011</p>
@@ -342,7 +371,7 @@
 
 					<div class="legends-div-9 animating-container">
 						<img
-							src="./public/peter-schmeichel.jpg"
+							src="/peter-schmeichel.jpg"
 							alt="image of united legend peter-schmeichel by Getty Images"
 						/>
 						<p>Peter Schmeichel: 1991&ndash;1999</p>
@@ -350,15 +379,16 @@
 
 					<div class="legends-div-10 animating-container">
 						<img
-							src="./public/christiano-ronaldo.jpg"
+							src="/christiano-ronaldo.jpg"
 							alt="image of united legend christiano-ronaldo by Getty Images"
 						/>
-						<p>Christiano Ronaldo: 2003&ndash;2009 and 2021&ndash;2022</p>
+						<p class="p1">Christiano Ronaldo: 2003&ndash;2009</p>
+						<p class="p2">2021&ndash;2022</p>
 					</div>
 
 					<div class="legends-div-11 animating-container">
 						<img
-							src="./public/david-beckham.jpg"
+							src="/david-beckham.jpg"
 							alt="image of united legend david beckham by Getty Images"
 						/>
 						<p>David Beckham: 1991&ndash;2003</p>
@@ -366,7 +396,7 @@
 
 					<div class="legends-div-12 animating-container">
 						<img
-							src="./public/martin-buchan.jpg"
+							src="/martin-buchan.jpg"
 							alt="image of united legend martin-buchan by Getty Images"
 						/>
 						<p>Martin Buchan: 1972&ndash;1983</p>
@@ -374,7 +404,7 @@
 
 					<div class="legends-div-13 animating-container">
 						<img
-							src="./public/norman-whiteside.jpg"
+							src="/norman-whiteside.jpg"
 							alt="image of united legend norman-whiteside by Getty Images"
 						/>
 						<p>Norman Whiteside: 1982&ndash;1989</p>
@@ -382,7 +412,7 @@
 
 					<div class="legends-div-14 animating-container">
 						<img
-							src="./public/ole-gunnar-solskjaer.jpg"
+							src="/ole-gunnar-solskjaer.jpg"
 							alt="image of united legend ole-gunnar-solskjaer by Getty Images"
 						/>
 						<p>Ole Gunnar Solskjaer: 1996&ndash;2007</p>
@@ -390,7 +420,7 @@
 
 					<div class="legends-div-15 animating-container">
 						<img
-							src="./public/gary-pallister.jpg"
+							src="/gary-pallister.jpg"
 							alt="image of united legend gary-pallister by Getty Images"
 						/>
 						<p>Gary Pallister: 1989&ndash;1998</p>
@@ -398,7 +428,7 @@
 
 					<div class="legends-div-16 animating-container">
 						<img
-							src="./public/dennis-irwin.jpg"
+							src="/dennis-irwin.jpg"
 							alt="image of united legend denis irwin by Getty Images"
 						/>
 						<p>Denis Irwin: 1990&ndash;2002</p>
@@ -406,7 +436,7 @@
 
 					<div class="legends-div-17 animating-container">
 						<img
-							src="./public/nobby-stiles.jpg"
+							src="/nobby-stiles.jpg"
 							alt="image of united legend nobby stiles by Getty Images"
 						/>
 						<p>Nobby Stiles: 1960&ndash;1971</p>
@@ -414,7 +444,7 @@
 
 					<div class="legends-div-18 animating-container">
 						<img
-							src="./public/steve-bruce.jpg"
+							src="/steve-bruce.jpg"
 							alt="image of united legend steve bruce by Getty Images"
 						/>
 						<p>Steve Bruce: 1987&ndash;1996</p>
@@ -422,7 +452,7 @@
 
 					<div class="legends-div-19 animating-container">
 						<img
-							src="./public/jaap-stam.jpg"
+							src="/jaap-stam.jpg"
 							alt="image of united legend jaap stam by Getty Images"
 						/>
 						<p>Jaap Stam: 1998&ndash;2001</p>
@@ -430,7 +460,7 @@
 
 					<div class="legends-div-20 animating-container">
 						<img
-							src="./public/mark-hughes.jpg"
+							src="/mark-hughes.jpg"
 							alt="image of united legend mark-hughes by Getty Images"
 						/>
 						<p>Mark Hughes: 1980&ndash;1995</p>
@@ -441,6 +471,10 @@
 
 			<!-- PLAYERS SECTION -->
 			<section id="players">
+				<div class="fans-header players-header animating-container">
+					<h2 class="fans-main-h2"><span>MEET OUR PLAYERS</span></h2>
+				</div>
+
 				<div class="btn-div">
 					<button id="btn-1" class="btn-div-active">MEN</button>
 					<button id="btn-2">WOMEN</button>
@@ -455,7 +489,7 @@
 						<div class="player-info-div animating-container">
 							<div class="player-info">
 								<img
-									src="./public/men-profiles/altay.webp"
+									src="/men-profiles/altay.webp"
 									alt="image of player of united Goalkeeper Altay"
 								/>
 								<p class="player-number">1</p>
@@ -465,7 +499,7 @@
 
 							<div class="player-info">
 								<img
-									src="./public/men-profiles/heaton.jpg"
+									src="/men-profiles/heaton.jpg"
 									alt="image of player of united Goalkeeper heaton"
 								/>
 								<p class="player-number">22</p>
@@ -475,7 +509,7 @@
 
 							<div class="player-info">
 								<img
-									src="./public/men-profiles/onana.jpg"
+									src="/men-profiles/onana.jpg"
 									alt="image of player of united Goalkeeper onana"
 								/>
 								<p class="player-number">24</p>
@@ -493,7 +527,7 @@
 							<!-- BEGINNING OF PLAYERS BIO DIV -->
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/lindelof.jpg"
+									src="/men-profiles/lindelof.jpg"
 									alt="image of player of united defender lindelof"
 								/>
 								<p class="player-number">2</p>
@@ -503,7 +537,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/maguire.jpg"
+									src="/men-profiles/maguire.jpg"
 									alt="image of player of united defender MIGUIRE"
 								/>
 								<p class="player-number">5</p>
@@ -513,7 +547,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/martinez.jpg"
+									src="/men-profiles/martinez.jpg"
 									alt="image of player of united defender MARTINEZ"
 								/>
 								<p class="player-number">6</p>
@@ -523,7 +557,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/malacia.jpg"
+									src="/men-profiles/malacia.jpg"
 									alt="image of player of united defender MALACIA"
 								/>
 								<p class="player-number">12</p>
@@ -533,7 +567,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/varane.webp"
+									src="/men-profiles/varane.webp"
 									alt="image of player of united defender VARANE"
 								/>
 								<p class="player-number">19</p>
@@ -543,7 +577,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/dalot.jpg"
+									src="/men-profiles/dalot.jpg"
 									alt="image of player of united defender DALOT"
 								/>
 								<p class="player-number">20</p>
@@ -553,7 +587,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/shaw.jpg"
+									src="/men-profiles/shaw.jpg"
 									alt="image of player of united defender SHAW"
 								/>
 								<p class="player-number">23</p>
@@ -563,7 +597,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/wan-bissaka.jpg"
+									src="/men-profiles/wan-bissaka.jpg"
 									alt="image of player of united defender WAN BISSAKA"
 								/>
 								<p class="player-number">29</p>
@@ -573,7 +607,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/brandon-williams.png"
+									src="/men-profiles/brandon-williams.png"
 									alt="image of player of united defender BRANDON WILLIAMS"
 								/>
 								<p class="player-number">33</p>
@@ -583,7 +617,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/john-evans.jpg"
+									src="/men-profiles/john-evans.jpg"
 									alt="image of player of united defender JONNY EVANS"
 								/>
 								<p class="player-number">35</p>
@@ -593,7 +627,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/alvaro.png"
+									src="/men-profiles/alvaro.png"
 									alt="image of player of united defender ALVARO FERNANDEZ"
 								/>
 								<p class="player-number">42</p>
@@ -603,7 +637,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/kambala.png"
+									src="/men-profiles/kambala.png"
 									alt="image of player of united defender KAMBWALA"
 								/>
 								<p class="player-number">53</p>
@@ -623,7 +657,7 @@
 						<div class="player-info-div">
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/amrabat.webp"
+									src="/men-profiles/amrabat.webp"
 									alt="image of player of united midfielder AMBRABAT"
 								/>
 								<p class="player-number">4</p>
@@ -633,7 +667,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/mount.jpg"
+									src="/men-profiles/mount.jpg"
 									alt="image of player of united midfielder MOUNT"
 								/>
 								<p class="player-number">7</p>
@@ -643,7 +677,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/fernandez.jpg"
+									src="/men-profiles/fernandez.jpg"
 									alt="image of player of united midfielder BRUNO FERNANDEZ"
 								/>
 								<p class="player-number">8</p>
@@ -653,7 +687,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/erikson.jpg"
+									src="/men-profiles/erikson.jpg"
 									alt="image of player of united midfielder ERIKSEN"
 								/>
 								<p class="player-number">14</p>
@@ -663,7 +697,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/Amad.jpg"
+									src="/men-profiles/Amad.jpg"
 									alt="image of player of united midfielder AMAD"
 								/>
 								<p class="player-number">16</p>
@@ -673,7 +707,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/casemiro.jpg"
+									src="./men-profiles/casemiro.jpg"
 									alt="image of player of united midfielder CASEMIRO"
 								/>
 								<p class="player-number">18</p>
@@ -683,7 +717,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/pellistri.jpg"
+									src="/men-profiles/pellistri.jpg"
 									alt="image of player of united midfielder PELLISTRI"
 								/>
 								<p class="player-number">28</p>
@@ -693,7 +727,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/van-deBeek.jpg"
+									src="/men-profiles/van-deBeek.jpg"
 									alt="image of player of united midfielder VAN DE BEEK"
 								/>
 								<p class="player-number">34</p>
@@ -703,7 +737,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/mainoo.png"
+									src="/men-profiles/mainoo.png"
 									alt="image of player of united midfielder MAINOO"
 								/>
 								<p class="player-number">37</p>
@@ -713,7 +747,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/mctominay.jpg"
+									src="/men-profiles/mctominay.jpg"
 									alt="image of player of united midfielder MCTOMINAY"
 								/>
 								<p class="player-number">39</p>
@@ -723,7 +757,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/daniel-gore.webp"
+									src="/men-profiles/daniel-gore.webp"
 									alt="image of player of united midfielder DANIEL GORE"
 								/>
 								<p class="player-number">44</p>
@@ -733,7 +767,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/hannibal.jpg"
+									src="/men-profiles/hannibal.jpg"
 									alt="image of player of united midfielder HANNIBAL"
 								/>
 								<p class="player-number">46</p>
@@ -743,7 +777,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/omari-forson.webp"
+									src="/men-profiles/omari-forson.webp"
 									alt="image of player of united midfielder OMARI FORSON"
 								/>
 								<p class="player-number">62</p>
@@ -763,7 +797,7 @@
 						<div class="player-info-div">
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/martial.jpg"
+									src="/men-profiles/martial.jpg"
 									alt="image of player of united forward MARTIAL"
 								/>
 								<p class="player-number">9</p>
@@ -773,7 +807,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/rashford.jpg"
+									src="/men-profiles/rashford.jpg"
 									alt="image of player of united forward RASHFORD"
 								/>
 								<p class="player-number">10</p>
@@ -783,7 +817,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/hojlund.jpg"
+									src="/men-profiles/hojlund.jpg"
 									alt="image of player of united forward HOJLUND"
 								/>
 								<p class="player-number">11</p>
@@ -793,7 +827,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/garnacho.jpg"
+									src="/men-profiles/garnacho.jpg"
 									alt="image of player of united forward GARNACHO"
 								/>
 								<p class="player-number">17</p>
@@ -803,7 +837,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/anthony.jpg"
+									src="/men-profiles/anthony.jpg"
 									alt="image of player of united forward ANTONY"
 								/>
 								<p class="player-number">21</p>
@@ -813,7 +847,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/sancho.jpg"
+									src="/men-profiles/sancho.jpg"
 									alt="image of player of united forward SANCHO"
 								/>
 								<p class="player-number">25</p>
@@ -823,7 +857,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/shortire.jpg"
+									src="/men-profiles/shortire.jpg"
 									alt="image of player of united forward SHORETIRE"
 								/>
 								<p class="player-number">47</p>
@@ -833,7 +867,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/men-profiles/greenwood.png"
+									src="/men-profiles/greenwood.png"
 									alt="image of player of united forward GREENWOOD"
 								/>
 								<span class="player-name firstname">MASON</span>
@@ -855,7 +889,7 @@
 						<div class="player-info-div animating-container">
 							<div class="player-info">
 								<img
-									src="./public/women-profile/mary-earps.webp"
+									src="/women-profile/mary-earps.webp"
 									alt="image of player of united women Goalkeeper Earps"
 								/>
 								<p class="player-number">27</p>
@@ -865,7 +899,7 @@
 
 							<div class="player-info">
 								<img
-									src="./public/women-profile/phallon.webp"
+									src="/women-profile/phallon.webp"
 									alt="image of player of united women Goalkeeper heaton"
 								/>
 								<p class="player-number">91</p>
@@ -883,7 +917,7 @@
 							<!-- BEGINNING OF PLAYERS BIO DIV -->
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/gabby.webp"
+									src="/women-profile/gabby.webp"
 									alt="image of player of united women defender GABBY "
 								/>
 								<p class="player-number">3</p>
@@ -893,7 +927,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/maya.webp"
+									src="/women-profile/maya.webp"
 									alt="image of player of united women defender MAYA"
 								/>
 								<p class="player-number">4</p>
@@ -903,7 +937,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/aoife.webp"
+									src="/women-profile/aoife.webp"
 									alt="image of player of united women defender AOIFE"
 								/>
 								<p class="player-number">5</p>
@@ -913,7 +947,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/hannah-b.webp"
+									src="/women-profile/hannah-b.webp"
 									alt="image of player of united women defender HANNER"
 								/>
 								<p class="player-number">6</p>
@@ -923,7 +957,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/jayde.webp"
+									src="/women-profile/jayde.webp"
 									alt="image of player of united women defender JAYDE"
 								/>
 								<p class="player-number">14</p>
@@ -933,7 +967,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/Gemma-Evans.webp"
+									src="/women-profile/Gemma-Evans.webp"
 									alt="image of player of united women defender GEMMA"
 								/>
 								<p class="player-number">15</p>
@@ -943,7 +977,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/millie-t.webp"
+									src="/women-profile/millie-t.webp"
 									alt="image of player of united women defender MILLIE"
 								/>
 								<p class="player-number">21</p>
@@ -953,7 +987,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/Evie.webp"
+									src="/women-profile/Evie.webp"
 									alt="image of player of united women defender EVIE"
 								/>
 								<p class="player-number">25</p>
@@ -973,7 +1007,7 @@
 						<div class="player-info-div">
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/ella.webp"
+									src="/women-profile/ella.webp"
 									alt="image of player of united women midfielder ELLA"
 								/>
 								<p class="player-number">7</p>
@@ -983,7 +1017,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/irene.webp"
+									src="/women-profile/irene.webp"
 									alt="image of player of united women midfielder IRENE"
 								/>
 								<p class="player-number">8</p>
@@ -993,7 +1027,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/katie.webp"
+									src="/women-profile/katie.webp"
 									alt="image of player of united women midfielder KATIE"
 								/>
 								<p class="player-number">10</p>
@@ -1003,7 +1037,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/leah.webp"
+									src="/women-profile/leah.webp"
 									alt="image of player of united women midfielder LEAH"
 								/>
 								<p class="player-number">11</p>
@@ -1013,7 +1047,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/hayley-ladd.webp"
+									src="/women-profile/hayley-ladd.webp"
 									alt="image of player of united women midfielder HAYLEY"
 								/>
 								<p class="player-number">12</p>
@@ -1023,7 +1057,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/lisa.webp"
+									src="/women-profile/lisa.webp"
 									alt="image of player of united women midfielder LISA"
 								/>
 								<p class="player-number">16</p>
@@ -1033,7 +1067,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/hinata.webp"
+									src="/women-profile/hinata.webp"
 									alt="image of player of united women midfielder HINATA"
 								/>
 								<p class="player-number">20</p>
@@ -1043,7 +1077,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/grace.webp"
+									src="/women-profile/grace.webp"
 									alt="image of player of united women midfielder GRACE"
 								/>
 								<p class="player-number">26</p>
@@ -1053,7 +1087,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/emma-watson.webp"
+									src="/women-profile/emma-watson.webp"
 									alt="image of player of united women midfielder EMMA"
 								/>
 								<p class="player-number">34</p>
@@ -1073,7 +1107,7 @@
 						<div class="player-info-div">
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/melvine.webp"
+									src="/women-profile/melvine.webp"
 									alt="image of player of united women forward MELVINE"
 								/>
 								<p class="player-number">9</p>
@@ -1083,7 +1117,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/lucia.webp"
+									src="/women-profile/lucia.webp"
 									alt="image of player of united women forward LUCIA"
 								/>
 								<p class="player-number">17</p>
@@ -1093,7 +1127,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/nikita.webp"
+									src="/women-profile/nikita.webp"
 									alt="image of player of united women forward NIKITA"
 								/>
 								<p class="player-number">22</p>
@@ -1103,7 +1137,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/geyse.webp"
+									src="/women-profile/geyse.webp"
 									alt="image of player of united women forward GEYSE"
 								/>
 								<p class="player-number">23</p>
@@ -1113,7 +1147,7 @@
 
 							<div class="player-info animating-container">
 								<img
-									src="./public/women-profile/rachel.webp"
+									src="/women-profile/rachel.webp"
 									alt="image of player of united women forward RACHEL"
 								/>
 								<p class="player-number">28</p>
@@ -1131,8 +1165,28 @@
 		</main>
 		<!-- END OF MAIN SECTION -->
 
-		<script type="module" src="/main.js"></script>
+		<!-- BEGINNING OF FOOTER -->
+		<footer>
+			<div class="main-footer">
+				<p class="disclaimer">
+					DISCLAIMER&colon; I DO NOT OWN THE IMAGES, VIDEO, LOGO AND DESIGN FOR
+					THIS WEBSITE
+				</p>
+				<p>
+					This website was crafted solely for educational purposes and to refine
+					my skills.
+				</p>
+			</div>
+			<p class="attribute">
+				Attributed to Manchester United FC Ltd and Getty Images
+			</p>
+		</footer>
+		<!-- ENDING OF FOOTER -->
+
+		<!-- LINKING THE JAVASCRIPT FILES TO HTML -->
+		<script type="module" src="./main.js"></script>
 		<script type="module" src="./image-slider.js"></script>
 		<script type="module" src="./scroll-effect.js"></script>
 	</body>
+	<!-- END OF BODY -->
 </html>
