@@ -13,4 +13,4 @@ setInterval(() => {
 	if (counter > 8) {
 		counter = 1;
 	}
-}, 6000);
+}, 5000);

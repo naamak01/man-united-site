@@ -41,13 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
 	};
 
 	// Add event listener to buttons
+	// Add event listener to buttons
 	document.getElementById('btn-1').addEventListener('click', () => {
 		toggleVisibility('.men-players', '.women-players');
+		// Scroll to the top of the second container
+		document.querySelector('.men-players').scrollIntoView();
+
 		toggleActiveClass('btn-1', 'btn-2');
 	});
 
 	document.getElementById('btn-2').addEventListener('click', () => {
 		toggleVisibility('.women-players', '.men-players');
+		// Scroll to the top of the second container
+		document.querySelector('.women-players').scrollIntoView();
 		toggleActiveClass('btn-2', 'btn-1');
 	});
 });
