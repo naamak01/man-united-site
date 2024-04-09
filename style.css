@@ -826,6 +826,7 @@ p.p2 {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	column-gap: 2rem;
+	row-gap: 2rem;
 	font-family: 'Bebas Neue', Helvetica, sans-serif;
 	color: #ffffff;
 }
