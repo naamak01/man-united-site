@@ -873,7 +873,7 @@ span.player-name.lastname {
 }
 
 p.player-number {
-	position: relative;
+	position: absolute;
 	display: inline-block;
 	left: 20px;
 	bottom: 132px;
