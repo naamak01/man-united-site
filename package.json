@@ -12,6 +12,8 @@
 		"vite": "^5.2.0"
 	},
 	"dependencies": {
-		"build": "^0.1.4"
+		"build": "^0.1.4",
+		"js-yaml": "^4.1.0",
+		"standard-version-updater-yaml": "^1.0.3"
 	}
 }
