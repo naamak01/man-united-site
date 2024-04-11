@@ -13,7 +13,7 @@
 	},
 	"dependencies": {
 		"build": "^0.1.4",
-		"js-yaml": "^4.1.0",
+		"js-yaml": "^3.13.1",
 		"standard-version-updater-yaml": "^1.0.3"
 	}
 }
