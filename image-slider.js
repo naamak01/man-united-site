@@ -5,7 +5,7 @@ import './style.css';
 let counter = 1;
 
 // Functions checks everytime the image is cheked it slides to that image
-// It goes through all 6 images and reverts back to the first and repeats process
+// It goes through all 8 images and reverts back to the first and repeats process
 setInterval(() => {
 	document.getElementById('radio' + counter).checked = true;
 	counter++;
